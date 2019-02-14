@@ -1,0 +1,15 @@
+{
+  "name": "pug-test",
+  "version": "1.0.0",
+  "description": "pug test",
+  "main": "index.js",
+  "dependencies": {
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}

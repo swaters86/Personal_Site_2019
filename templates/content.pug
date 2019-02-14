@@ -1,0 +1,11 @@
+div(class="container")
+ section(class="intro")
+    h1(class="intro__headline_level_1 gradient-1") From Web Designer to Full-Stack Developer
+    p(class="intro__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+ section(class="skills")
+    h2(class="skills__headline__level__2") Skills
+    ul(class="skills-list")
+        each skillLevel, name in languages
+            li(class="skills-list__heading")= name
+            li(class="skills-list__bar")
+                div(class="skills-list--rating", style="width:" + skillLevel + "%")
