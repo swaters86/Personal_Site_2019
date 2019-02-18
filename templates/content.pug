@@ -16,3 +16,9 @@ div(class="container")
             li(class="skills-list__heading skills-list--alt")= name
             li(class="skills-list__bar")
                 div(class="skills-list--rating skills-list--rating--alt", style="width:" + skillLevel + "%")
+    h3(class="skills__headline__level__3") Tools
+    ul(class="skills-list")
+        each skillLevel, name in tools
+            li(class="skills-list__heading")= name
+            li(class="skills-list__bar")
+                div(class="skills-list--rating", style="width:" + skillLevel + "%")
