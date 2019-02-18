@@ -27,10 +27,31 @@ const toolsObj = {
     'Gulp.js' : '50',  
 }
 
+const frameworksObj = {
+    'Vue.js' : '40', 
+    'Yii 1.1' : '90', 
+    'Yii 2' : '80', 
+    'Wordpress' : '70'
+}
+
+const librariesObj = {
+    'React' : '50',
+    'Pug' : '70',
+}
+
+const otherObj = {
+    'Documentation' : '90',
+    'Organization' : '80',
+    'Attention to Detail' : '100',
+}
+
 let html = pug.renderFile('templates/index.pug', {
     languages: languagesObj, 
     software: softwareObj,
     tools: toolsObj,
+    frameworks: frameworksObj, 
+    libraries:  librariesObj,
+    other: otherObj,
 });
 
 fs.writeFile("test.html", html, function(err) {
