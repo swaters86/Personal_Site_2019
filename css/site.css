@@ -39,6 +39,14 @@
     padding: 30px 0;
     text-align: left;
   }
+
+
+  .skills__headline__level__3 {
+    color: #23877e;
+    font-size: 1.5em;
+    padding: 30px 0;
+    text-align: left;
+  }
   
   .skills-list {
     list-style-type: none;
@@ -47,16 +55,40 @@
   .skills-list__heading {
     font-size: 1.5em;
     color: #23877e;
-    padding: 10px 0;
+    padding: 15px 0;
   }
   
   .skills-list__bar {
     width: 100%;
     height: 30px;
+    
     background: #181818;
+   
   }
   
   .skills-list--rating {
     height: 30px;
     background: #23877e;
+    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .skills-list--alt {
+    text-align: right;
+  }
+
+  .skills-list--rating--alt {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    float: right;
+  }
+
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
   }
