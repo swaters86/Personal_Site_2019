@@ -45,13 +45,17 @@ const otherObj = {
     'Attention to Detail' : '100',
 }
 
-let html = pug.renderFile('templates/index.pug', {
+const skillsObj = {
     languages: languagesObj, 
     software: softwareObj,
     tools: toolsObj,
     frameworks: frameworksObj, 
-    libraries:  librariesObj,
+    libraries: librariesObj,
     other: otherObj,
+}
+
+let html = pug.renderFile('templates/index.pug', {
+    skills: skillsObj
 });
 
 fs.writeFile("test.html", html, function(err) {

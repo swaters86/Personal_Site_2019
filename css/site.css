@@ -64,7 +64,7 @@
     background: #181818;
   }
   
-  .skills-list--rating {
+  .skills-list__rating {
     height: 30px;
     background: #23877e;
     background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
@@ -76,14 +76,13 @@
     text-align: right;
   }
 
-  .skills-list--rating--alt {
+  .skills-list__rating--alt {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     float: right;
   }
-
 
   .clearfix::after {
     content: "";
