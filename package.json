@@ -4,6 +4,7 @@
   "description": "pug test",
   "main": "index.js",
   "dependencies": {
+    "jslint": "^0.12.1",
     "pug": "^2.0.3"
   },
   "devDependencies": {},

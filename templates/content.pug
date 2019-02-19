@@ -6,12 +6,19 @@ div(class="container")
         ul(class="pill__tabs")
             - var i = 0;
             each categoryObj, categoryName in skills
-                li(class="pill__tab")
-                    a(href="#pill__tab__1")= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
-                div(class="tab__content__1", style="display: none")
-                    ul(class=((i % 2) != 0) ? "skills-list skills-list--alt" : "skills-list")
-                        each skillLevel, name in categoryObj
-                            li(class="skills-list__heading")= name
-                            li(class="skills-list__bar")
-                                div(class=((i % 2) != 0) ? "skills-list__rating skills-list__rating--alt" : "skills-list__rating", style="width:" + skillLevel + "%")
-                    - i++
+                li(class="pill__tabs__nav__item")
+                    - var classList = (i === 0) ? "pill__tabs__nav__item__link pill__tabs__nav__item__link--active" : "pill__tabs__nav__item__link";
+                    a(href="#tab-" + i, class= classList)= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
+                - i++
+
+        - var i = 0;
+        each categoryObj, categoryName in skills
+            - var classList = (i === 0) ? "pill__tabs__nav__item__content pill__tabs__nav__item__content--active" : "pill__tabs__nav__item__content";
+            div(id="tab__content-" + i, class= classList)
+                h2(class="skills__headline__level__2")= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
+                ul(class="skills-list")
+                    each skillLevel, name in categoryObj
+                        li(class="skills-list__heading")= name
+                        li(class="skills-list__bar")
+                            div(class="skills-list__rating", style="width:" + skillLevel + "%")
+            - i++
