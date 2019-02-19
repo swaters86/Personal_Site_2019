@@ -1,37 +1,38 @@
 const pug = require('pug');
-
 const fs = require('fs');
 
 const languagesObj = {
     'HTML5' : '90',
     'CSS3' : '80',
-    'ES6' : '70', 
-    'PHP' : '80', 
+    'ES6' : '70',
+    'PHP' : '80',
     'MySQL' : '80',
-    'Python' : '50', 
+    'Python' : '50',
+    'Node.js' : '60'
 };
 
 const softwareObj = {
-    'Adobe Illustrator' : '90', 
+    'Adobe Illustrator' : '90',
     'Adobe Photoshop' : '80',
-    'Balsamiq' : '90', 
-    'Adobe Premier' : '40', 
-    'Visual Studio Code' : '70', 
+    'Balsamiq' : '90',
+    'Adobe Premier' : '40',
+    'Visual Studio Code' : '70',
     'Eclipse' : '80',
 }
 
 const toolsObj = {
     'GIT' : '60',
     'SVN' : '60',
-    'Webpack' : '50', 
-    'Gulp.js' : '50',  
+    'Webpack' : '50',
+    'Gulp.js' : '50',
 }
 
 const frameworksObj = {
-    'Vue.js' : '40', 
-    'Yii 1.1' : '90', 
-    'Yii 2' : '80', 
-    'Wordpress' : '70'
+    'Vue.js' : '40',
+    'Yii 1.1' : '90',
+    'Yii 2' : '80',
+    'Wordpress' : '70',
+    'Express.js' : '50'
 }
 
 const librariesObj = {
@@ -41,6 +42,7 @@ const librariesObj = {
 
 const otherObj = {
     'Documentation' : '90',
+    'Graphic Design' : '90',
     'Organization' : '80',
     'Attention to Detail' : '100',
 }
