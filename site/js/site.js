@@ -1,6 +1,22 @@
 'use strict';
 
 (function () {
+    window.onscroll = function() {makeSticky()};
+
+    var tabList = document.querySelector('.tablist');
+    var tabListContent = document.querySelector('.tablist__tab__content--active');
+    var sticky = tabList.offsetTop;
+
+    function makeSticky() {
+        if (window.pageYOffset > sticky) {
+            tabList.classList.add('tablist--sticky');
+            tabListContent.classList.add('tablist__content--sticky');
+        } else {
+            tabList.classList.remove('tablist--sticky');
+            tabListContent.classList.remove('tablist__content--sticky');
+        }
+    }
+
     var pillTabContentContainers = document.querySelectorAll('.tablist__tab__content');
     var pillTabLinks = document.querySelectorAll('.tablist__tab__link');
 
