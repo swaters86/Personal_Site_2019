@@ -3,12 +3,15 @@ div(class="container")
     h1(class="intro__headline_level_1 gradient-1") From Web Designer to Full-Stack Developer
     p(class="intro__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
     section(class="skills")
-        - var i = 0;
-        each categoryObj, categoryName in skills
-            h3(class="skills__headline__level__3")= categoryName
-            ul(class=((i % 2) != 0) ? "skills-list skills-list--alt" : "skills-list")
-                each skillLevel, name in categoryObj
-                    li(class="skills-list__heading")= name
-                    li(class="skills-list__bar")
-                        div(class=((i % 2) != 0) ? "skills-list__rating skills-list__rating--alt" : "skills-list__rating", style="width:" + skillLevel + "%")
-            - i++;
+        ul(class="pill__tabs")
+            - var i = 0;
+            each categoryObj, categoryName in skills
+                li(class="pill__tab")
+                    a(href="#pill__tab__1")= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
+                div(class="tab__content__1", style="display: none")
+                    ul(class=((i % 2) != 0) ? "skills-list skills-list--alt" : "skills-list")
+                        each skillLevel, name in categoryObj
+                            li(class="skills-list__heading")= name
+                            li(class="skills-list__bar")
+                                div(class=((i % 2) != 0) ? "skills-list__rating skills-list__rating--alt" : "skills-list__rating", style="width:" + skillLevel + "%")
+                    - i++
