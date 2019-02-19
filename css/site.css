@@ -1,50 +1,91 @@
+/**
+  Theme Name: Night Hawk
+  Description: Basic Theme for Personal Website
+  Author: Steven Waters
+  Author Website: StevenWaters.com
+  Version: 1
+*/
+
 * {
     margin: 0;
     padding: 0;
   }
   
   body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .container {
     width: 900px;
     margin: 0 auto;
+    text-align: center;
   }
-  
-  .intro__text {
+
+  /** Masthead Component **/
+  .masthead__text {
+    color: #50ceab;
     font-size: 2em;
     line-height: 1.8em;
-    text-align: justify;
-    color: #50ceab;
   }
-  
+    
+  .masthead__headline_level_1 {
+    padding: 100px 0;
+    margin: 0;
+    font-size: 5em;
+  }
+
   .gradient-1 {
     background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
-  .intro__headline_level_1 {
-    font-size: 5em;
-    padding: 30px 0;
-    margin: 0;
+
+  /** Pill Tabs Component **/ 
+  .tablist {
+    margin: 100px 0;
   }
-  
+
+  .tablist__tab + .tablist__tab {
+    margin-left: 20px;
+  }
+
+  .tablist__tab {
+    display: inline-block;
+  }
+
+  .tablist__tab__content + .tablist__tab__content {
+    margin: 100px 0;
+  }
+
+  .tablist__tab__link {
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #181818;
+    color: #efefef;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .tablist__tab__link:hover,
+  .tablist__tab__link--active {
+    background: #23877e;
+  }
+
+  /** Skills Component **/
   .skills__headline__level__2 {
+    padding: 30px 0;
     color: #23877e;
     font-size: 2em;
-    padding: 30px 0;
-    text-align: left;
   }
 
   .skills__headline__level__3 {
+    padding: 30px 0;
     color: #23877e;
     font-size: 1.5em;
-    padding: 30px 0;
-    text-align: left;
   }
   
   .skills-list {
@@ -52,9 +93,10 @@
   }
   
   .skills-list__heading {
-    font-size: 1.5em;
     color: #23877e;
     padding: 15px 0;
+    font-size: 1.5em;
+    text-align: left;
   }
   
   .skills-list__bar {
@@ -65,44 +107,23 @@
   
   .skills-list__rating {
     height: 30px;
-    background: #23877e;
-    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-  }
-
-  .pill__tabs {
-    margin: 30px 0;
-  }
-
-  .pill__tabs__nav__item + .pill__tabs__nav__item {
-    margin-left: 20px;
-  }
-
-  .pill__tabs__nav__item {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .pill__tabs__nav__item__link {
-    /* display: inline-block; */
-    color: #efefef;
-    text-decoration: none;
-    background: #181818;
-    min-width: 100px;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 15px;
-  }
-
-  .pill__tabs__nav__item__link:hover,
-  .pill__tabs__nav__item__link--active {
     background: #23877e;
+    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
   }
 
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  /** Footer Component **/
+  .footer {
+    height: 30px;
+    margin: 100px auto;
+  }
+
+  .footer__text {
+    color:#23877e;
+    font-size: 1em;
+  }
+
+  .footer__heart {
+    color: red;
   }

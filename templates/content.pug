@@ -1,20 +1,20 @@
 div(class="container")
- section(class="intro")
-    h1(class="intro__headline_level_1 gradient-1") From Web Designer to Full-Stack Developer
-    p(class="intro__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+    section(class="masthead")
+        h1(class="masthead__headline_level_1 gradient-1") From Web Designer to Full-Stack Developer
+        p(class="masthead__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
     section(class="skills")
-        ul(class="pill__tabs")
+        ul(class="tablist")
             - var i = 0;
             each categoryObj, categoryName in skills
-                li(class="pill__tabs__nav__item")
-                    - var classList = (i === 0) ? "pill__tabs__nav__item__link pill__tabs__nav__item__link--active" : "pill__tabs__nav__item__link";
+                li(class="tablist__tab")
+                    - var classList = (i === 0) ? "tablist__tab__link tablist__tab__link--active" : "tablist__tab__link";
                     a(href="#tab-" + i, class= classList)= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
                 - i++
 
         - var i = 0;
         each categoryObj, categoryName in skills
-            - var classList = (i === 0) ? "pill__tabs__nav__item__content pill__tabs__nav__item__content--active" : "pill__tabs__nav__item__content";
-            div(id="tab__content-" + i, class= classList)
+            - var classList = (i === 0) ? "tablist__tab__content tablist__tab__content--active" : "tablist__tab__content";
+            div(id="tab-" + i, class= classList)
                 h2(class="skills__headline__level__2")= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
                 ul(class="skills-list")
                     each skillLevel, name in categoryObj
@@ -22,3 +22,5 @@ div(class="container")
                         li(class="skills-list__bar")
                             div(class="skills-list__rating", style="width:" + skillLevel + "%")
             - i++
+    footer(class="footer")
+        p(class="footer__text") Made with <span class="footer__heart">&#10084;</span> by Steven Waters
