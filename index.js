@@ -58,7 +58,7 @@ let html = pug.renderFile('templates/index.pug', {
     skills: skillsObj
 });
 
-fs.writeFile("test.html", html, function(err) {
+fs.writeFile("site/index.html", html, function(err) {
     if(err) {
         return console.log(err);
     }

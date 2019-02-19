@@ -55,6 +55,10 @@
     display: inline-block;
   }
 
+  .tablist__tab__content {
+    min-height: 700px;
+  }
+
   .tablist__tab__content + .tablist__tab__content {
     margin: 100px 0;
   }
