@@ -127,3 +127,66 @@
   .footer__heart {
     color: red;
   }
+
+  /* Tablets, Ipads (portrait) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      width: 748px;
+    }
+
+    .masthead__headline_level_1  {
+      font-size: 4em; 
+    }
+  }
+
+  /* Iphone 3 and other similiar-sized devices */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .container {
+      width: 300px;
+    }
+
+    .masthead__headline_level_1  {
+      padding: 50px 0;
+      font-size: 3em; 
+    }
+
+    .masthead__text {
+      font-size: 1em;
+    }
+
+    .tablist {
+      margin: 30px 0;
+      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .tablist__tab {
+      margin: 20px 0
+    }
+
+    .tablist__tab + .tablist__tab {
+      margin-left: 0px;
+    }
+
+    .tablist__tab__content + .tablist__tab__content {
+      margin: 30px 0;
+    }
+
+    .tablist__tab__link {
+      padding: 15px;
+    }
+  }
+
+  /* Iphone 6, Iphone 6 plus*/
+  @media (min-width: 375px) and (max-width: 480px) {
+    .masthead__headline_level_1  {
+      padding: 50px 0;
+      font-size: 3em; 
+    }
+
+    .container {
+      width: 360px;
+    } 
+  }
