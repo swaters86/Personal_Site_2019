@@ -1,18 +1,18 @@
 /**
-  Theme Name: Night Hawk
+  Theme Name: Roundy
   Description: Basic Theme for Personal Website
   Author: Steven Waters
   Author Website: StevenWaters.com
   Version: 1
 */
 
-* {
+  * {
     margin: 0;
     padding: 0;
   }
 
   body {
-    background: #1e1e1e;
+    background: #ebfaf8;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -23,18 +23,29 @@
   }
 
   /** Masthead Component **/
-  .masthead__headline_level_1 {
-    color: #b3ffab;
-    padding-top: 50px;
-    margin: 0;
-    font-size: 5em;
+  .masthead {
+    background: #292929;
   }
 
-  .masthead__text {
-    padding: 50px 0 10px 0;
+  .masthead-content {
+    width: 900px;
+    padding: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .masthead-content__headline_level_1 {
     color: #50ceab;
-    font-size: 2em;
-    line-height: 1.8em;
+    padding-top: 20px;
+    margin: 0;
+    font-size: 10em;
+  }
+
+  .masthead-content__text {
+    padding: 20px 0;
+    color: #50ceab;
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
 
   .gradient-1 {
@@ -52,42 +63,54 @@
   }
 
   .tablist__tab {
-    margin: 20px 5px;
     list-style-type: none;
+  }
+
+  .tablist__tab + .tablist__tab {
+    margin-left: 50px;
+  }
+
+  .tablist__tab {
+    list-style-type: none;
+    margin-top: 20px;
   }
 
   .tablist__tab__link {
     display: inline-block;
-    padding: 20px 20px;
+    padding: 20px;
     border-radius: 50px;
-    background: #101010;
     color: #23877e;
     font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
+    border: 4px #23877e solid;
   }
 
   .tablist__tab__link:hover,
   .tablist__tab__link--active {
     background: #23877e;
-    color: #101010;
+    color: #ebfaf8;
+  }
+
+  .tablist__tab__content {
+    margin-top: 30px;
   }
 
   /** Skills Component **/
   .skills .skills__headline__level__1 {
-    padding: 30px 0;
+    padding: 20px 0;
     color: #23877e;
     font-size: 3em;
   }
 
   .skills__headline__level__2 {
-    padding: 30px 0;
+    padding: 20px 0;
     color: #23877e;
     font-size: 2em;
   }
 
   .skills__headline__level__3 {
-    padding: 30px 0;
+    padding: 20px 0;
     color: #23877e;
     font-size: 1.5em;
   }
@@ -98,30 +121,42 @@
 
   .skills-list__heading {
     color: #23877e;
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 1.5em;
     text-align: left;
   }
-  
-  .skills-list__bar {
-    width: 100%;
-    height: 30px;
-    background: #101010;
+
+  .skills__text {
+    color: #23877e;
+    font-size: 0.875em;
+    padding: 20px 0;
+  }
+
+  .skills-list__ranking__key {
+    padding: 5px;
   }
   
+  .skills-list__bar {
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 4px #23877e solid;
+  }
+
   .skills-list__rating {
     height: 30px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 20px;
     background: #23877e;
     background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
+    width: 10%;
+    transition: width 2s;
   }
 
   /** Projects Component **/
   .projects .projects__headline__level__1 {
+    padding: 20px 0 0 0;
     color: #23877e;
     font-size: 3em;
-    padding: 30px 0 0 0;
   }
 
   .projects__text {
@@ -140,8 +175,10 @@
     width: 430px; 
     height: 430px;
     margin: 5px;
-    background: #101010;
     position: relative;
+    border: 4px #23877e solid;
+    border-radius: 20px;
+    background: #292929;
   }
 
   .projects__project:hover .project__screenshot {
@@ -169,7 +206,7 @@
 
     100% {
       transform: scale(.95,.95);
-      opacity: .1;
+      opacity: .04;
     }
   }
 
@@ -198,11 +235,12 @@
     top: 0;
     left: 0;
     z-index: 0;
+    border-radius: 15px;
     height: 430px;
   }
 
   .project__description {
-    padding: 20px 20px 40px 20px;
+    padding: 20px;
     font-size: 1.3em;
     line-height: 1.5em;
     color: #23877e;
@@ -214,25 +252,28 @@
     height: 20px;
     padding: 20px 10px;
     margin: 0 auto;
-    background: #101010;
     color: #23877e;
+    border-radius: 50px;
     border: 2px #23877e solid;
     text-decoration: none;
-    border-radius: 50px;
+  }
+
+  .project__button:hover {
+    background: #23877e;
+    color: #ebfaf8;
   }
 
   .project__meta {
-   position: absolute; 
-   top: 100px;
-   left: 0;
-   z-index: 5;
-   opacity: 0;
+    position: absolute; 
+    top: 75px;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
   }
 
   /** Footer Component **/
   .footer {
     height: 30px;
-    padding: 50px 0;
   }
 
   .footer__text {
@@ -258,54 +299,84 @@
 
   /* Iphone 3 and other similiar-sized devices */
   @media (min-width: 320px) and (max-width: 360px) {
-    .container {
-      width: 340px;
+    .container, 
+    .masthead-content{
+      width: 310px;
     }
 
-    .masthead__headline_level_1  {
-      padding: 20px 0;
-      font-size: 3.4em;
+    .masthead-content {
+      padding: 0px;
     }
 
-    .masthead__text {
-      font-size: 1em;
-      padding: 10px 0;
-    }
-
-    .tablist__tab {
-      margin: 20px 5px;
-      list-style-type: none;
-      flex: 1;
-    }
-
-    .tablist__tab__link {
-      width: 110px;    
-    }
-
-    .tablist__tab__content {
-      min-height: initial;
-      padding: 20px 0;
-    }
-
-  }
-
-  /* Iphone 6, Iphone 6 plus*/
-  @media (min-width: 375px) and (max-width: 480px) {
-    .container {
-      width: 360px;
-    }
-
-    .masthead__headline_level_1  {
-      padding: 20px 0;
-      font-size: 4em; 
+    .masthead-content__headline_level_1 {
+      font-size: 4.5em;
     }
 
     .masthead__text {
       font-size: 1.5em;
-      padding: 20px 0;
+      line-height: 1.2em;
     }
 
-    .tablist__tab__link {
-      width: 130px;  
+    .tablist__tab {
+      margin: 10px 0;
+      list-style-type: none;
     }
+  
+    .tablist__tab + .tablist__tab {
+      margin-left: 10px;
+    }
+
+    .projects__project {
+      width: 320px;
+      height: 320px;
+    }
+
+    .project__meta {
+      top: 0px;
+    }
+
+    .project__screenshot {
+      height: 320px;
+    }
+  }
+
+  /* Iphone 6, Iphone 6 plus*/
+  @media (min-width: 375px) and (max-width: 480px) {
+    .container, 
+    .masthead-content{
+      width: 310px;
+    }
+
+    /* .container {
+      width: 340px;
+    }
+
+    .masthead__headline_level_1  {
+      font-size: 3.8em;
+    }
+
+    .masthead__text {
+      font-size: 1.5em;
+      line-height: 1.2em;
+    }
+
+    .tablist__tab {
+      margin: 10px 0;
+    }
+    .tablist__tab + .tablist__tab {
+      margin: 0 10px;
+    }
+
+    .projects__project {
+      width: 350px;
+      height: 350px;
+    }
+
+    .project__meta {
+      top: 0px;
+    }
+
+    .project__screenshot {
+      height: 350px;
+    } */
   }

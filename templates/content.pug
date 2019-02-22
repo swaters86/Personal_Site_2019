@@ -1,7 +1,8 @@
+section(class="masthead")
+    div(class="masthead-content")
+        h1(class="masthead-content__headline_level_1 gradient-1") Hello.
+        p(class="masthead-content__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
 div(class="container")
-    section(class="masthead")
-        h1(class="masthead__headline_level_1 gradient-1") From Web Designer to Full-Stack Developer
-        p(class="masthead__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
     section(class="skills")
         h1(class="skills__headline__level__1") Skills
         ul(class="tablist")
@@ -11,15 +12,15 @@ div(class="container")
                     - var classList = (i === 0) ? "tablist__tab__link tablist__tab__link--active" : "tablist__tab__link";
                     a(href="#tab-" + i, class= classList)= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
                 - i++
-
+        p(class="skills__text") (<b>w</b> = working knowledge, <b>b</b> = basic knowledge)
         - var i = 0;
         each categoryObj, categoryName in skills
             - var classList = (i === 0) ? "tablist__tab__content tablist__tab__content--active" : "tablist__tab__content";
             div(id="tab-" + i, class= classList)
-                h2(class="skills__headline__level__2")= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
                 ul(class="skills-list")
                     each skillLevel, name in categoryObj
                         li(class="skills-list__heading")= name
+                            sup(class="skills-list__ranking__key")= (skillLevel > 50) ? 'w' : 'b'
                         li(class="skills-list__bar")
                             div(class="skills-list__rating", style="width:" + skillLevel + "%")
             - i++

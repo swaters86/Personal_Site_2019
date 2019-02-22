@@ -2,10 +2,10 @@ const pug = require('pug');
 const fs = require('fs');
 
 const languagesObj = {
-    'HTML5': '90',
-    'CSS3': '80',
+    'HTML5': '95',
+    'CSS3': '90',
     'ES6': '70',
-    'PHP': '80',
+    'PHP': '90',
     'MySQL': '80',
     'Python': '50',
     'Node.js': '60',
@@ -28,8 +28,7 @@ const toolsObj = {
     'Webpack': '50',
     'Gulp.js': '50',
     'NPM': '60',
-    'Chrome Developer Tools': '70',
-    'Firefox Developer Tools': '60',
+    'Developer Tools': '70',
 }
 
 const frameworksObj = {
@@ -46,19 +45,20 @@ const librariesObj = {
 }
 
 const otherObj = {
+    'SEO': '60',
+    'Email Tempaltes': '60',
     'Documentation': '90',
     'Graphic Design': '90',
     'Organization': '80',
     'Attention to Detail': '90',
-    'QA': '100',
+    'QA': '70',
 }
+
+Object.assign(otherObj, librariesObj, frameworksObj, toolsObj);
 
 const skillsObj = {
     languages: languagesObj,
     software: softwareObj,
-    tools: toolsObj,
-    frameworks: frameworksObj,
-    libraries: librariesObj,
     other: otherObj,
 }
 
