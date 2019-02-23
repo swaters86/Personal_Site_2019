@@ -1,6 +1,7 @@
 const pug = require('pug');
 const fs = require('fs');
 
+
 const languagesObj = {
     'HTML5': '95',
     'CSS3': '90',
@@ -62,8 +63,30 @@ const skillsObj = {
     other: otherObj,
 }
 
+const projectsObj = [
+    {
+        title: 'CSS Terminal',
+        thumbnailFileName: 'css_terminal',
+        altText: 'Screenshot of the CSS terminal project that was taken on codepen.io',
+        descriptionText: 'A basic cli tool that I made using HTML5, CSS3, and ES6. The goal is to make it interactive someday.',
+        url: 'https://codepen.io/swaters86/full/XjBPdp',
+        linkTitleText: 'See a demo of the CSS Terminal application on Codepen.io',
+        linkText: 'Visit Codepen',
+    },
+    {
+        title: 'A HTML, CSS, JS, and SVG Reproduction of the Title Sequence for Ozarkt',
+        thumbnailFileName: 'ozark_title_seq_reproduciton',
+        altText: 'Screenshot of the reproduction of the title sequence for Ozark which  was taken on codepen.io',
+        descriptionText: 'I decided to reproduce the title sequence for Ozark one day after watching an episode. Technologies used: HTML, CSS, JS, and an library for creating SVG graphics. ',
+        url: 'https://codepen.io/swaters86/full/PdpXKa',
+        linkTitleText: 'See a demo of the Ozark title sequence recreation on Codepen.io',
+        linkText: 'Visit Codepen',
+    }
+]
+
 let html = pug.renderFile('templates/index.pug', {
-    skills: skillsObj
+    skills: skillsObj,
+    projects: projectsObj,
 });
 
 fs.writeFile("site/index.html", html, function (err) {

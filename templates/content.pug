@@ -24,29 +24,17 @@ div(class="container")
                         li(class="skills-list__bar")
                             div(class="skills-list__rating", style="width:" + skillLevel + "%")
             - i++
+        - var i = 0;
+
+
     section(class="projects")
         h1(class="projects__headline__level__1") Recent Projects
         p(class="projects__text") (Alot of these are still a work in progress)
         div(class="projects__content")
-            div(class="projects__project")
-                img(class="project__screenshot", src="images/screenshots-resized/project-4.png")
-                div(class="project__meta")
-                    p(class="project__description") Integer dignissim egestas turpis, vel iaculis ante viverra ac. Morbi dignissim nibh eu egestas vehicula. Aenean erat orci, dignissim sit amet lorem et, feugiat tincidunt lectus.
-                    a(class="project__button", href="#", title="Link to Project 1") Visit CodePen &#187;
-            div(class="projects__project")
-                img(class="project__screenshot", src="images/screenshots-resized/project-3.png")
-                div(class="project__meta")
-                    p(class="project__description") Integer dignissim egestas turpis, vel iaculis ante viverra ac. Morbi dignissim nibh eu egestas vehicula. Aenean erat orci, dignissim sit amet lorem et, feugiat tincidunt lectus.
-                    a(class="project__button", href="#", title="Link to Project 2") Visit CodePen &#187;
-            div(class="projects__project")
-                img(class="project__screenshot", src="images/screenshots-resized/project-2.png")
-                div(class="project__meta")
-                    p(class="project__description") Integer dignissim egestas turpis, vel iaculis ante viverra ac. Morbi dignissim nibh eu egestas vehicula. Aenean erat orci, dignissim sit amet lorem et, feugiat tincidunt lectus.
-                    a(class="project__button", href="#", title="Link to Project 2") Visit CodePen &#187;
-            div(class="projects__project")
-                img(class="project__screenshot", src="images/screenshots-resized/project-1.png")
-                div(class="project__meta")
-                    p(class="project__description") Integer dignissim egestas turpis, vel iaculis ante viverra ac. Morbi dignissim nibh eu egestas vehicula. Aenean erat orci, dignissim sit amet lorem et, feugiat tincidunt lectus.
-                    a(class="project__button", href="#", title="Link to Project 3") Visit CodePen &#187;
-    footer(class="footer")
+            each project in projects
+                div(class="projects__project")
+                    img(class="project__screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt= project.altText)
+                    div(class="project__meta")
+                        p(class="project__description")= project.descriptionText
+                        a(class="project__button", href= project.url, title= project.linkTitleText)= project.linkText + ' »'
         p(class="footer__text") Made with <span class="footer__heart">&#10084;</span> by Steven Waters. No frameworks or PNG images were harmed during the making of this website.
