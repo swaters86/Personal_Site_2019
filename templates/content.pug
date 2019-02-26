@@ -1,11 +1,11 @@
-section(class="hero is-dark")
+section(class="hero is-dark has-text-centered")
     div(class="hero-body")
         div(class="container")
-            h1(class="title") Hello, my name is Steven Waters.     
-            p(class="intro-text") I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
-section(class="section")
+            h1(class="title is-gradient-text") Hello.
+            p(class="intro-text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+section(class="section has-text-centered")
     div(class="container")
-        h1(class="title") Skills
+        h1(class="title is-1 has-text-primary ") Skills
         //h2(class="subtitle") (w = working knowledge, b = basic knowledge)
         div(class="tabs is-toggle is-toggle-rounded")
             ul
@@ -19,15 +19,15 @@ section(class="section")
         each categoryObj, categoryName in skills
             - var classList = (i === 0) ? "tab-content is-active" : "tab-content"
             div(id="tab-" + i, class=classList)
-                h3=categoryName
+                h3(class="title is-3 is-capitalized has-text-primary ")=categoryName
                 each skillLevel, name in categoryObj
-                    h4=name
+                    h4(class="title is-4 has-text-left has-text-primary")=name
                     progress(class="progress is-large" value=skillLevel max="100") 60%
             - i++
-section(class="section")
+section(class="section has-text-centered")
     div(class="container")
-        h1(class="title") Projects
-        p(class="subtitle") Unfortantely, I don't have a lot to show off here because my professional work involved working on applications that are propietary and internal/semi-intranet apps. All of the projects I worked on from home were usually experimentations so they were never completed fully (sorry, not sorry).
+        h1(class="title is-1 has-text-primary") Projects
+        p(class="subtitle has-text-primary") Unfortantely, I don't have a lot to show off here because my professional work involved working on applications that are propietary and internal/semi-intranet apps. All of the projects I worked on from home were usually experimentations so they were never completed fully (sorry, not sorry).
         div(class="tile is-ancestor", style="flex-wrap: wrap")
             each project in projects
                 - var classList = (projects.length < 3) ? 'tile is-parent is-4' : 'tile is-parent is-4'
@@ -40,29 +40,29 @@ section(class="section")
                             a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText + ' »'
 section(class="section")
     div(class="container")
-        h1(class="title") Get In Touch
+        h1(class="title is-1 has-text-primary has-text-centered") Get In Touch
         div(class="tile is-ancestor")
             div(class="tile is-parent")
                 div(class="tile is-child box")
                     div(class="field is-horzontal")
                         div(class="field-body")
                             div(class="field")
-                                label(class="label") Name
+                                label(class="label has-text-primary") Name
                                 div(class="control")
                                     input(class="input", type="text", placeholder="Bob Lawblob")
                             div(class="field")
-                                label(class="label") Email
+                                label(class="label has-text-primary") Email
                                 div(class="control")
                                     input(class="input", type="email", placeholder="bob.lawblob@example.com")
                     div(class="field")
-                        label(class="label") Message
+                        label(class="label has-text-primary") Message
                         div(class="control")
                             textarea(class="textarea", type="text", placeholder="Your Message")
                     div(class="field")
                         div(class="control")
-                            button(class="button is-primary") Submit
-                    h4(class="title is-4")  Social Media
-                    div(class="social-media-icons")
+                            button(class="button is-primary is-rounded") Submit
+                    h4(class="title is-4 has-text-primary has-text-centered")  Social Media
+                    div(class="social-media-icons has-text-centered")
                         a(href="#", title="Connect with Steven on Codepen.io")
                             span(class="icon")
                                 img(src="svg/codepen.svg", alt="Icon for the Codepen.io")
@@ -71,4 +71,3 @@ section(class="section")
                             span(class="icon")
                                 img(src="svg/linkedin.svg", alt="Icon for the Linkedin.com")
                             span(class="icon-link") LinkedIn
-
