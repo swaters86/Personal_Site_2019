@@ -74,14 +74,14 @@ const projectsObj = [
         linkText: 'Visit Codepen',
     },
     {
-        title: 'A HTML, CSS, JS, and SVG Reproduction of the Title Sequence for Ozarkt',
+        title: 'Ozark Title Sequence Recreating using HTML/CSS/JavaScript and an SVG library.',
         thumbnailFileName: 'ozark_title_seq_reproduciton',
         altText: 'Screenshot of the reproduction of the title sequence for Ozark which  was taken on codepen.io',
-        descriptionText: 'I decided to reproduce the title sequence for Ozark one day after watching an episode. Technologies used: HTML, CSS, JS, and an library for creating SVG graphics. ',
+        descriptionText: 'I decided to recreate the Ozark title sequence using web techonlogies HTML, CSS, JS, and an library for creating SVG graphics.',
         url: 'https://codepen.io/swaters86/full/PdpXKa',
         linkTitleText: 'See a demo of the Ozark title sequence recreation on Codepen.io',
         linkText: 'Visit Codepen',
-    }
+    },
 ]
 
 let html = pug.renderFile('templates/index.pug', {

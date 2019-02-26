@@ -1,40 +1,74 @@
-section(class="masthead")
-    div(class="masthead-content")
-        h1(class="masthead-content__headline_level_1 gradient-1") Hello.
-        p(class="masthead-content__text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
-div(class="container")
-    section(class="skills")
-        h1(class="skills__headline__level__1") Skills
-        ul(class="tablist")
-            - var i = 0;
-            each categoryObj, categoryName in skills
-                li(class="tablist__tab")
-                    - var classList = (i === 0) ? "tablist__tab__link tablist__tab__link--active" : "tablist__tab__link";
-                    a(href="#tab-" + i, class= classList)= categoryName.charAt(0).toUpperCase() + categoryName.substr(1)
-                - i++
-        p(class="skills__text") (<b>w</b> = working knowledge, <b>b</b> = basic knowledge)
-        - var i = 0;
+section(class="hero is-dark")
+    div(class="hero-body")
+        div(class="container")
+            h1(class="title") Hello, my name is Steven Waters.     
+            p(class="intro-text") I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+section(class="section")
+    div(class="container")
+        h1(class="title") Skills
+        //h2(class="subtitle") (w = working knowledge, b = basic knowledge)
+        div(class="tabs is-toggle is-toggle-rounded")
+            ul
+                - var i = 0
+                each categoryObj, categoryName in skills
+                    - var classList = (i === 0) ? "tab is-active" : "tab"
+                    li(class=classList)
+                        a(href="#tab-" + i)= categoryName
+                    - i++
+        - var i = 0
         each categoryObj, categoryName in skills
-            - var classList = (i === 0) ? "tablist__tab__content tablist__tab__content--active" : "tablist__tab__content";
-            div(id="tab-" + i, class= classList)
-                ul(class="skills-list")
-                    each skillLevel, name in categoryObj
-                        li(class="skills-list__heading")= name
-                            sup(class="skills-list__ranking__key")= (skillLevel > 50) ? 'w' : 'b'
-                        li(class="skills-list__bar")
-                            div(class="skills-list__rating", style="width:" + skillLevel + "%")
+            - var classList = (i === 0) ? "tab-content is-active" : "tab-content"
+            div(id="tab-" + i, class=classList)
+                h3=categoryName
+                each skillLevel, name in categoryObj
+                    h4=name
+                    progress(class="progress is-large" value=skillLevel max="100") 60%
             - i++
-        - var i = 0;
-
-
-    section(class="projects")
-        h1(class="projects__headline__level__1") Recent Projects
-        p(class="projects__text") (Alot of these are still a work in progress)
-        div(class="projects__content")
+section(class="section")
+    div(class="container")
+        h1(class="title") Projects
+        p(class="subtitle") Unfortantely, I don't have a lot to show off here because my professional work involved working on applications that are propietary and internal/semi-intranet apps. All of the projects I worked on from home were usually experimentations so they were never completed fully (sorry, not sorry).
+        div(class="tile is-ancestor", style="flex-wrap: wrap")
             each project in projects
-                div(class="projects__project")
-                    img(class="project__screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt= project.altText)
-                    div(class="project__meta")
-                        p(class="project__description")= project.descriptionText
-                        a(class="project__button", href= project.url, title= project.linkTitleText)= project.linkText + ' »'
-        p(class="footer__text") Made with <span class="footer__heart">&#10084;</span> by Steven Waters. No frameworks or PNG images were harmed during the making of this website.
+                - var classList = (projects.length < 3) ? 'tile is-parent is-4' : 'tile is-parent is-4'
+                div(class=classList)
+                    div(class="tile project is-child box has-text-centered")
+                        figure(class="image image is-square")
+                            img(class="project-screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt=project.altText)
+                        div(class="project-details")
+                            p(class="project-description")= project.descriptionText
+                            a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText + ' »'
+section(class="section")
+    div(class="container")
+        h1(class="title") Get In Touch
+        div(class="tile is-ancestor")
+            div(class="tile is-parent")
+                div(class="tile is-child box")
+                    div(class="field is-horzontal")
+                        div(class="field-body")
+                            div(class="field")
+                                label(class="label") Name
+                                div(class="control")
+                                    input(class="input", type="text", placeholder="Bob Lawblob")
+                            div(class="field")
+                                label(class="label") Email
+                                div(class="control")
+                                    input(class="input", type="email", placeholder="bob.lawblob@example.com")
+                    div(class="field")
+                        label(class="label") Message
+                        div(class="control")
+                            textarea(class="textarea", type="text", placeholder="Your Message")
+                    div(class="field")
+                        div(class="control")
+                            button(class="button is-primary") Submit
+                    h4(class="title is-4")  Social Media
+                    div(class="social-media-icons")
+                        a(href="#", title="Connect with Steven on Codepen.io")
+                            span(class="icon")
+                                img(src="svg/codepen.svg", alt="Icon for the Codepen.io")
+                            span(class="icon-link") Codepen
+                        a(href="#", title="Connect with Steven on LinkedIn.com")
+                            span(class="icon")
+                                img(src="svg/linkedin.svg", alt="Icon for the Linkedin.com")
+                            span(class="icon-link") LinkedIn
+
