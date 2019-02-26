@@ -30,7 +30,7 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 20px 0;
-    color: #50ceab;
+    color: #b3ffab;
 }
 
 .hero.is-dark {
@@ -58,7 +58,13 @@ body {
 }
 
 .tab-content {
+    padding-top: 30px;
     min-height: 600px;
+}
+
+.tab-content .subtitle {
+    padding: 20px 0;
+    margin-bottom: 60px;
 }
 
 .progress.is-large {
@@ -86,8 +92,37 @@ progress::-moz-progress-bar {
 .project {
     position: relative;
     border: 4px #23877e solid;
-    border-radius: 20px;
+    border-radius: 30px;
     background: #292929;
+}
+
+.project-screenshot {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+.project-details {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+}
+
+.project-description {
+    padding: 20px;
+    color: #23877e;
+}
+
+/* Primary Button Styling for the Projects Section */
+
+.project .button.is-primary {
+    min-width: 130px;
+    height: 20px;
+    padding: 30px;
 }
 
 .project:hover .project-screenshot {
@@ -102,15 +137,8 @@ progress::-moz-progress-bar {
     animation-fill-mode: forwards;
 }
 
-/* Primary Button Styling for the Projects Section */
-.project .button.is-primary{
-  min-width: 130px;
-  height: 20px;
-  padding: 30px;
-}
-
 .project:hover .button {
-    animation-duration: .5s;
+    animation-duration: .8s;
     animation-name: flip-y-fast;
 }
 
@@ -141,26 +169,6 @@ progress::-moz-progress-bar {
     100% {
         transform: rotateY(0deg);
     }
-}
-
-.project-screenshot {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    border-radius: 15px;
-}
-
-.project-description {
-    padding: 20px;
-}
-
-.project-details {
-    position: absolute;
-    top: 75px;
-    left: 0;
-    z-index: 5;
-    opacity: 0;
 }
 
 .social-media-icons a:link {
@@ -201,6 +209,9 @@ progress::-moz-progress-bar {
     .tabs.is-toggle a {
         font-size: .80rem;
     }
+    .tab-content .subtitle {
+        font-size: .9rem;
+    }
 }
 
 @media all and (-ms-high-contrast: none),
@@ -214,23 +225,41 @@ progress::-moz-progress-bar {
 }
 
 .button.is-primary {
-  border: 2px #23877e solid;
-  background:  none;
-  color: #23877e;
+    border: 2px #23877e solid;
+    background: none;
+    color: #23877e;
 }
 
 .button.is-primary:hover {
-  border: 2px #23877e solid;
-  background: #23877e;
-  color: #ebfaf8;
+    border: 2px #23877e solid;
+    background: #23877e;
+    color: #ebfaf8;
 }
 
-
-.icon-link, .icon-link:active {
-  color: #23877e;
-  text-decoration: underline;
+.icon-link,
+.icon-link:active {
+    color: #23877e;
+    text-decoration: underline;
 }
 
-.icon-link:hover {
-  color: #50ceab;
+.tab-content .tag {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title .tag {
+    margin-left: 10px;
+}
+
+.has-secondary-bg-color {
+    background: #b3ffab;
+}
+
+.tag:not(body).is-primary {
+    background: #23877e;
+}
+
+.box {
+  border-radius: 30px;
+  box-shadow: initial;
 }

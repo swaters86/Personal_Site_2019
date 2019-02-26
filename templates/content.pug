@@ -5,8 +5,7 @@ section(class="hero is-dark has-text-centered")
             p(class="intro-text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
 section(class="section has-text-centered")
     div(class="container")
-        h1(class="title is-1 has-text-primary ") Skills
-        //h2(class="subtitle") (w = working knowledge, b = basic knowledge)
+        h2(class="title is-2 has-text-primary") Skills
         div(class="tabs is-toggle is-toggle-rounded")
             ul
                 - var i = 0
@@ -20,14 +19,17 @@ section(class="section has-text-centered")
             - var classList = (i === 0) ? "tab-content is-active" : "tab-content"
             div(id="tab-" + i, class=classList)
                 h3(class="title is-3 is-capitalized has-text-primary ")=categoryName
+                h5(class="subtitle is-5") <span class="tag is-primary inline-flex">w</span> = Working Knowledge <span class="tag is-primary inline-flex">b</span> = Basic Knowledge
                 each skillLevel, name in categoryObj
                     h4(class="title is-4 has-text-left has-text-primary")=name
-                    progress(class="progress is-large" value=skillLevel max="100") 60%
+                        sup
+                            span(class="tag is-primary")= (skillLevel > 50) ? 'w' : 'b'
+                    progress(class="progress is-large" value=skillLevel max="100")
             - i++
 section(class="section has-text-centered")
     div(class="container")
-        h1(class="title is-1 has-text-primary") Projects
-        p(class="subtitle has-text-primary") Unfortantely, I don't have a lot to show off here because my professional work involved working on applications that are propietary and internal/semi-intranet apps. All of the projects I worked on from home were usually experimentations so they were never completed fully (sorry, not sorry).
+        h2(class="title is-2 has-text-primary") Projects
+        p(class="subtitle has-text-primary") Most of these are just experimentations for now, because most of my professional experience involved working on proprietary / semi-intranet web apps.
         div(class="tile is-ancestor", style="flex-wrap: wrap")
             each project in projects
                 - var classList = (projects.length < 3) ? 'tile is-parent is-4' : 'tile is-parent is-4'
@@ -40,34 +42,38 @@ section(class="section has-text-centered")
                             a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText + ' »'
 section(class="section")
     div(class="container")
-        h1(class="title is-1 has-text-primary has-text-centered") Get In Touch
+        h2(class="title is-2 has-text-primary has-text-centered") Get In Touch
         div(class="tile is-ancestor")
             div(class="tile is-parent")
-                div(class="tile is-child box")
+                form(action="https://formspree.io/swaters86@gmail.com", method="POST", class="tile is-child box")
                     div(class="field is-horzontal")
                         div(class="field-body")
                             div(class="field")
-                                label(class="label has-text-primary") Name
+                                label(for="name", class="label has-text-primary") Name
                                 div(class="control")
-                                    input(class="input", type="text", placeholder="Bob Lawblob")
+                                    input(id="name", class="input", type="text", name="name", placeholder="Bob Lawblob", required)
                             div(class="field")
-                                label(class="label has-text-primary") Email
+                                label(for="email", class="label has-text-primary") Email
                                 div(class="control")
-                                    input(class="input", type="email", placeholder="bob.lawblob@example.com")
+                                    input(id="email", class="input", type="email", name="_replyto", placeholder="bob.lawblob@example.com", requierd)
                     div(class="field")
-                        label(class="label has-text-primary") Message
+                        label(for="message", class="label has-text-primary") Message
                         div(class="control")
-                            textarea(class="textarea", type="text", placeholder="Your Message")
+                            textarea(id="message", class="textarea", type="text", name="message", placeholder="Your Message", required)
                     div(class="field")
                         div(class="control")
-                            button(class="button is-primary is-rounded") Submit
+                            button(type="submit", class="button is-primary is-rounded") Submit
                     h4(class="title is-4 has-text-primary has-text-centered")  Social Media
                     div(class="social-media-icons has-text-centered")
-                        a(href="#", title="Connect with Steven on Codepen.io")
+                        a(href="https://github.com/swaters86", title="Steven's Github.com Profile")
                             span(class="icon")
-                                img(src="svg/codepen.svg", alt="Icon for the Codepen.io")
+                                img(src="svg/github.svg", alt="Github.com Logo Icon")
+                            span(class="icon-link") Codepen                    
+                        a(href="https://codepen.io/swaters86/pens/public/", title="Steven's Codepen.io Profile")
+                            span(class="icon")
+                                img(src="svg/codepen.svg", alt="Codepen.io Logo Icon")
                             span(class="icon-link") Codepen
-                        a(href="#", title="Connect with Steven on LinkedIn.com")
+                        a(href="https://www.linkedin.com/in/stevenwaters/", title="Steven's LinkedIn.com Profile")
                             span(class="icon")
-                                img(src="svg/linkedin.svg", alt="Icon for the Linkedin.com")
+                                img(src="svg/linkedin.svg", alt="Linkedin.com Logo Icon")
                             span(class="icon-link") LinkedIn
