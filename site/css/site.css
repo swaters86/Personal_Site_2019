@@ -66,26 +66,30 @@ body {
 }
 
 .progress-labels {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress-labels label {
+    font-weight: bold
 }
 
 .progress-bar {
-  box-sizing: unset;
-  height: 30px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  border: 4px #23877e solid;
-  background: #ebfaf8;
+    box-sizing: unset;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 4px #23877e solid;
+    background: #ebfaf8;
 }
 
 .progress-value {
-  box-sizing: unset;
-  width: 10%;
-  height: 30px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
+    box-sizing: unset;
+    width: 10%;
+    height: 30px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
 }
 
 .project {
@@ -105,13 +109,14 @@ body {
 
 .project-details {
     position: absolute;
-    top: 75px;
+    top: 10px;
     left: 0;
     z-index: 5;
     opacity: 0;
 }
 
 .project-description {
+    height: 210px;
     padding: 20px;
     color: #23877e;
 }
@@ -201,32 +206,6 @@ body {
     color: #23877e !important;
 }
 
-@media (max-width: 486px) {
-    .hero-body .title {
-        font-size: 6rem;
-    }
-}
-
-@media (max-width: 425px) {
-  .tabs.is-toggle a {
-    font-size: .9rem;
-  }
-
-  .tab-content .subtitle {
-      font-size: .9rem;
-  }
-}
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-    .is-gradient-text {
-        background: none;
-        -webkit-background-clip: initial;
-        background-clip: initial;
-        -webkit-text-fill-color: initial;
-    }
-}
-
 .button.is-primary {
     border: 2px #23877e solid;
     background: none;
@@ -250,6 +229,35 @@ body {
 }
 
 .box {
-  border-radius: 30px;
-  box-shadow: initial;
+    border-radius: 30px;
+    box-shadow: initial;
+}
+
+@media (max-width: 486px) {
+  .hero-body .title {
+      font-size: 6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .tabs.is-toggle a {
+      font-size: .9rem;
+  }
+  .tab-content .subtitle {
+      font-size: .9rem;
+  }
+  .social-media-icons a:link {
+      display: inline;
+      font-size: .8rem;
+  }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .is-gradient-text {
+      background: none;
+      -webkit-background-clip: initial;
+      background-clip: initial;
+      -webkit-text-fill-color: initial;
+  }
 }

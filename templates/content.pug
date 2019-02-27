@@ -21,8 +21,8 @@ section(class="section has-text-centered")
                 h3(class="title is-3 is-capitalized has-text-primary ")=categoryName
                 each skillLevel, name in categoryObj
                     div(class="progress-labels")
-                        span=name
-                        span=skillLevel + "%"
+                        span(class="label has-text-primary")=name
+                        span(class="label has-text-primary")=skillLevel + "%"
                     div(class="progress-bar", role="progressbar", aria-valuenow=skillLevel, aria-valuemin="0", aria-valuemax="100")
                         div(class="progress-value", style="width: " + skillLevel + "%")
             - i++
