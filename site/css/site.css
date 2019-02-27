@@ -34,12 +34,11 @@ body {
 }
 
 .hero.is-dark {
-    background-color: #363636;
+    background-color: #0b0b0b;
     color: #ebfaf8;
 }
 
 .tabs.is-toggle a {
-    border: 4px #23877e solid;
     font-size: 1.2rem;
     color: #23877e;
     text-transform: uppercase;
@@ -52,7 +51,6 @@ body {
 
 .tabs.is-toggle a:hover,
 .tabs.is-toggle li.is-active a {
-    border: 4px #23877e solid;
     background: #23877e;
     color: #ebfaf8;
 }
@@ -67,33 +65,34 @@ body {
     margin-bottom: 60px;
 }
 
-.progress.is-large {
-    height: 2.5rem;
-    border: 4px #23877e solid;
-    background: #ebfaf8;
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
-progress {
-    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
+.progress-bar {
+  box-sizing: unset;
+  height: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 4px #23877e solid;
+  background: #ebfaf8;
 }
 
-progress::-webkit-progress-bar {
-    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
-}
-
-progress::-webkit-progress-value {
-    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
-}
-
-progress::-moz-progress-bar {
-    background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
+.progress-value {
+  box-sizing: unset;
+  width: 10%;
+  height: 30px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
 }
 
 .project {
     position: relative;
     border: 4px #23877e solid;
     border-radius: 30px;
-    background: #292929;
+    background: #0b0b0b;
 }
 
 .project-screenshot {
@@ -193,8 +192,8 @@ progress::-moz-progress-bar {
 
 .is-gradient-text {
     background: linear-gradient(to right, #b3ffab 0%, #12fff7 100%);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -206,20 +205,24 @@ progress::-moz-progress-bar {
     .hero-body .title {
         font-size: 6rem;
     }
-    .tabs.is-toggle a {
-        font-size: .80rem;
-    }
-    .tab-content .subtitle {
-        font-size: .9rem;
-    }
+}
+
+@media (max-width: 425px) {
+  .tabs.is-toggle a {
+    font-size: .9rem;
+  }
+
+  .tab-content .subtitle {
+      font-size: .9rem;
+  }
 }
 
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
     .is-gradient-text {
         background: none;
-        background-clip: initial;
         -webkit-background-clip: initial;
+        background-clip: initial;
         -webkit-text-fill-color: initial;
     }
 }
@@ -242,21 +245,8 @@ progress::-moz-progress-bar {
     text-decoration: underline;
 }
 
-.tab-content .tag {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.title .tag {
-    margin-left: 10px;
-}
-
 .has-secondary-bg-color {
     background: #b3ffab;
-}
-
-.tag:not(body).is-primary {
-    background: #23877e;
 }
 
 .box {

@@ -47,7 +47,7 @@ const librariesObj = {
 
 const otherObj = {
     'SEO': '60',
-    'Email Tempaltes': '60',
+    'Email Tempalates': '60',
     'Documentation': '90',
     'Graphic Design': '90',
     'Organization': '80',

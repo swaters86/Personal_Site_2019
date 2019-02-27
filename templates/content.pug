@@ -19,12 +19,12 @@ section(class="section has-text-centered")
             - var classList = (i === 0) ? "tab-content is-active" : "tab-content"
             div(id="tab-" + i, class=classList)
                 h3(class="title is-3 is-capitalized has-text-primary ")=categoryName
-                h5(class="subtitle is-5") <span class="tag is-primary inline-flex">w</span> = Working Knowledge <span class="tag is-primary inline-flex">b</span> = Basic Knowledge
                 each skillLevel, name in categoryObj
-                    h4(class="title is-4 has-text-left has-text-primary")=name
-                        sup
-                            span(class="tag is-primary")= (skillLevel > 50) ? 'w' : 'b'
-                    progress(class="progress is-large" value=skillLevel max="100")
+                    div(class="progress-labels")
+                        span=name
+                        span=skillLevel + "%"
+                    div(class="progress-bar", role="progressbar", aria-valuenow=skillLevel, aria-valuemin="0", aria-valuemax="100")
+                        div(class="progress-value", style="width: " + skillLevel + "%")
             - i++
 section(class="section has-text-centered")
     div(class="container")
@@ -55,11 +55,11 @@ section(class="section")
                             div(class="field")
                                 label(for="email", class="label has-text-primary") Email
                                 div(class="control")
-                                    input(id="email", class="input", type="email", name="_replyto", placeholder="bob.lawblob@example.com", requierd)
+                                    input(id="email", class="input", type="email", name="_replyto", placeholder="bob.lawblob@example.com", required)
                     div(class="field")
                         label(for="message", class="label has-text-primary") Message
                         div(class="control")
-                            textarea(id="message", class="textarea", type="text", name="message", placeholder="Your Message", required)
+                            textarea(id="message", class="textarea", name="message", placeholder="Your Message", required)
                     div(class="field")
                         div(class="control")
                             button(type="submit", class="button is-primary is-rounded") Submit
