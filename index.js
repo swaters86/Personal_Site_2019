@@ -1,7 +1,6 @@
 const pug = require('pug');
 const fs = require('fs');
 
-
 const languagesObj = {
     'HTML5': '95',
     'CSS3': '90',
@@ -12,7 +11,7 @@ const languagesObj = {
     'Node.js': '60',
     'JSON': '90',
     'XML': '95',
-};
+}
 
 const softwareObj = {
     'Adobe Illustrator': '90',
@@ -84,12 +83,26 @@ const projectsObj = [
     },
 ]
 
-let html = pug.renderFile('templates/index.pug', {
+let indexPage = pug.renderFile('templates/index.pug', {
     skills: skillsObj,
     projects: projectsObj,
 });
 
-fs.writeFile("site/index.html", html, function (err) {
+let filmsPage = pug.renderFile('templates/films.pug', {
+    //skills: skillsObj,
+    //projects: projectsObj,
+});
+
+fs.writeFile("site/index.html", indexPage, function (err) {
+    if (err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+});
+
+
+fs.writeFile("site/films.html", filmsPage, function (err) {
     if (err) {
         return console.log(err);
     }
