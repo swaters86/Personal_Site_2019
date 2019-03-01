@@ -1,0 +1,176 @@
+/**
+  Theme Name: Personal Website v2.0
+  Description: Basic Theme for Personal Website
+  Author: Steven Waters
+  Author Website: StevenWaters.com
+  Version: 1
+*/
+
+@charset "utf-8";
+
+// Brand Colors
+$torquise1: #373d48;
+$blue1: #ebfaf8;
+
+// Bulma's global variables
+$primary: $torquise1;
+
+// Import Bulma Components
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/progress.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+
+html {
+    background: $blue1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/********************************
+    Hero
+********************************/
+.hero-body {
+    min-height: 200px;
+}
+
+.hero-body .title {
+    font-size: 10em;
+}
+
+.hero.is-dark {
+    background-color: $primary;
+    color: $blue1;
+}
+
+.hero.is-dark .title {
+    color: $blue1;
+}
+
+.title:not(.is-spaced) + .intro-text {
+    margin-top: -1.25rem;
+}
+/********************************
+    Section: Skills
+********************************/
+/* Tabs */
+.tabs.is-toggle a {
+    font-size: 1.2rem;
+    color: $primary;
+    text-transform: uppercase;
+}
+
+.tabs ul {
+    margin: 0 auto;
+    flex-grow: initial;
+}
+
+.tabs.is-toggle a:hover,
+.tabs.is-toggle li.is-active a {
+    background: $primary;
+    color: $blue1;
+}
+
+.tab-content {
+    padding-top: 30px;
+    min-height: 600px;
+}
+
+.tab-content .subtitle {
+    padding: 20px 0;
+    margin-bottom: 60px;
+}
+
+/* Progress Bars */
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress-labels label {
+    font-weight: bold
+}
+/********************************
+    Section: Projects
+********************************/
+.projects .project .content {
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.projects .project .screenshot {
+    border-radius: 20px;
+}
+
+.projects .project .description-text {
+    height: 175px;
+    overflow-x: hidden;
+    padding: 20px;
+    text-align: left;
+}
+/********************************
+    Section: Contact
+********************************/
+.contact .container {
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.social-media-container {
+    margin-top: 75px;
+}
+
+.social-media-container .link,
+.social-media-container .link:active {
+    padding-left: 20px;
+    color: $primary;
+    text-decoration: underline;
+}
+
+.box {
+    border-radius: 30px;
+    box-shadow: initial;
+}
+
+@media (max-width: 486px) {
+    .hero-body .title {
+        font-size: 6rem;
+    }
+    .projects .project .description-text {
+        height: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .tabs.is-toggle a {
+        font-size: .9rem;
+    }
+    .tab-content .subtitle {
+        font-size: .9rem;
+    }
+    .projects .project .description-text {
+        height: 200px;
+        overflow-x: unset;
+    }
+    .social-media-icons a:link {
+        font-size: .8rem;
+    }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .is-gradient-text {
+        background: none;
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        -webkit-text-fill-color: initial;
+    }
+}

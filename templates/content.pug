@@ -1,8 +1,8 @@
 section(class="hero is-dark has-text-centered")
     div(class="hero-body")
         div(class="container")
-            h1(class="title is-gradient-text") Hello.
-            p(class="intro-text") My name is Steven Waters and I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+            h1(class="title") Hello.
+            p(class="is-size-2 is-size-5-mobile") My name is Steven Waters. I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
 section(class="section has-text-centered")
     div(class="container")
         h2(class="title is-2 has-text-primary") Skills
@@ -23,29 +23,27 @@ section(class="section has-text-centered")
                     div(class="progress-labels")
                         span(class="label has-text-primary")=name
                         span(class="label has-text-primary")=skillLevel + "%"
-                    div(class="progress-bar", role="progressbar", aria-valuenow=skillLevel, aria-valuemin="0", aria-valuemax="100")
-                        div(class="progress-value", style="width: " + skillLevel + "%")
+                    progress(class="progress is-primary is-large", value=skillLevel, max="100")= skillLevel
             - i++
-section(class="section has-text-centered")
+section(class="section has-text-centered projects")
     div(class="container")
         h2(class="title is-2 has-text-primary") Projects
-        p(class="subtitle has-text-primary") Most of these are just experimentations for now, because most of my professional experience involved working on proprietary / semi-intranet web apps.
-        div(class="tile is-ancestor", style="flex-wrap: wrap")
+        p(class="subtitle has-text-primary") Most of these are just experimentations, because most of my professional experience involved working on proprietary / semi-intranet web apps.
+        div(class="columns is-7" style="flex-wrap: wrap")
             each project in projects
-                - var classList = (projects.length < 3) ? 'tile is-parent is-4' : 'tile is-parent is-4'
-                div(class=classList)
-                    div(class="tile project is-child box has-text-centered")
-                        figure(class="image image is-square")
-                            img(class="project-screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt=project.altText)
-                        div(class="project-details")
-                            p(class="project-description")= project.descriptionText
-                            a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText + ' »'
-section(class="section")
+                div(class="project column is-4")
+                        div(class="content")
+                            figure(class="image")
+                                img(class="screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt=project.altText)
+                            div(class="details")
+                                p(class="description-text")= project.descriptionText
+                                a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText + ' »'
+section(class="section contact")
+    h2(class="title is-2 has-text-primary has-text-centered") Get in Touch
     div(class="container")
-        h2(class="title is-2 has-text-primary has-text-centered") Get In Touch
-        div(class="tile is-ancestor")
-            div(class="tile is-parent")
-                form(action="https://formspree.io/swaters86@gmail.com", method="POST", class="tile is-child box")
+        div(class="columns")
+            div(class="column is-12")
+                form(action="https://formspree.io/swaters86@gmail.com", method="POST")
                     div(class="field is-horzontal")
                         div(class="field-body")
                             div(class="field")
@@ -63,17 +61,24 @@ section(class="section")
                     div(class="field")
                         div(class="control")
                             button(type="submit", class="button is-primary is-rounded") Submit
-                    h4(class="title is-4 has-text-primary has-text-centered")  Social Media
-                    div(class="social-media-icons has-text-centered")
-                        a(href="https://github.com/swaters86", title="Steven's Github.com Profile")
-                            span(class="icon")
-                                img(src="svg/github.svg", alt="Github.com Logo Icon")
-                            span(class="icon-link") Codepen                    
-                        a(href="https://codepen.io/swaters86/pens/public/", title="Steven's Codepen.io Profile")
-                            span(class="icon")
-                                img(src="svg/codepen.svg", alt="Codepen.io Logo Icon")
-                            span(class="icon-link") Codepen
-                        a(href="https://www.linkedin.com/in/stevenwaters/", title="Steven's LinkedIn.com Profile")
-                            span(class="icon")
-                                img(src="svg/linkedin.svg", alt="Linkedin.com Logo Icon")
-                            span(class="icon-link") LinkedIn
+
+    div(class="social-media-container")
+        h2(class="title is-4 has-text-primary has-text-centered") Social Media
+        div(class="columns is-centered")
+            div(class="column is-half")
+                div(class="columns")
+                    div(class="column is-4 has-text-centered")
+                        a(href="https://github.com/swaters86", title="Visit Github.com Profile")
+                            span(class="icon icon is-large")
+                                img(class="image" src="svg/github.svg", alt="Visit Github.com Profile")
+                                span(class="link") Github
+                    div(class="column is-4 has-text-centered")
+                        a(href="https://codepen.io/swaters86/pens/public/", title="Visit Codepen.io Profile")           
+                            span(class="icon icon is-large")
+                                img(src="svg/codepen.svg", alt="Visit Codepen.io Profile")
+                                span(class="link") Codepen    
+                    div(class="column is-4 has-text-centered")
+                        a(href="https://www.linkedin.com/in/stevenwaters/", title="Visit LinkedIn.com Profile")
+                            span(class="icon icon is-large")
+                                img(src="svg/linkedin.svg", alt="Visit Linkedin.com Profile")
+                                span(class="link") LinkedIn

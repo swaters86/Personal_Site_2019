@@ -77,7 +77,7 @@ const projectsObj = [
         title: 'A Web-Based Recreation of the Ozark Title Sequence',
         thumbnailFileName: 'ozark_title_seq_reproduciton',
         altText: 'Screenshot of the Ozark Title Sequence Codepen project',
-        descriptionText: 'This is a web-based / SVG experimentation of Ozark\'s title sequence. Each episode displays a different symbol depending on the story. I made this so the Font Awesome symbols can be swaped out easily.',
+        descriptionText: 'This is a web-based / SVG experimentation of Ozark\'s title sequence. Each episode displays a different symbol depending on the story, so I made this so the Font Awesome symbols can be swaped out easily.',
         url: 'https://codepen.io/swaters86/full/PdpXKa',
         linkTitleText: 'See a demo of the Ozark title sequence recreation on Codepen.io',
         linkText: 'Visit Codepen',
