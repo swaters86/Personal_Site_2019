@@ -9,11 +9,11 @@
 @charset "utf-8";
 
 // Brand Colors
-$torquise1: #373d48;
+$grey1: #373d48;
 $blue1: #ebfaf8;
 
 // Bulma's global variables
-$primary: $torquise1;
+$primary: $grey1;
 
 // Import Bulma Components
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -22,6 +22,7 @@ $primary: $torquise1;
 @import "../node_modules/bulma/sass/elements/progress.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/base/helpers.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
 
 html {
@@ -30,6 +31,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: $primary;
 }
 
 /********************************
