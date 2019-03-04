@@ -1,7 +1,7 @@
 {
-  "name": "pug-test",
+  "name": "personal-site-2019",
   "version": "1.0.0",
-  "description": "pug test",
+  "description": "Personal Website for 2019. This originally started off as a temp site but grew into a site that I think will be permanent for a while.",
   "main": "index.js",
   "dependencies": {
     "bulma": "^0.7.4",
