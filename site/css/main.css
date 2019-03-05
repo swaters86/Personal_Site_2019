@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
   Theme Name: Personal Website v2.0
   Description: Basic Theme for Personal Website
@@ -3480,11 +3481,9 @@ body {
   color: #ebfaf8; }
 
 .tab-content {
-  padding-top: 30px;
   min-height: 600px; }
 
 .tab-content .subtitle {
-  padding: 20px 0;
   margin-bottom: 60px; }
 
 /* Progress Bars */
@@ -3559,5 +3558,54 @@ body {
     -webkit-background-clip: initial;
     background-clip: initial;
     -webkit-text-fill-color: initial; } }
+/********************************
+    Section: Film Portfolio
+********************************/
+.film-portfolio {
+  padding-top: 50px; }
+
+.film-portfolio .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.film-portfolio .video-container iframe,
+.film-portfolio .video-container object,
+.film-portfolio .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.film-portfolio .piece .content {
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff; }
+
+.film-portfolio .details .button {
+  margin-top: 20px; }
+
+/********************************
+    Button Styles
+********************************/
+.button.is-primary {
+  color: #ebfaf8; }
+
+.button.is-primary:active {
+  color: #ebfaf8;
+  background: #373d48; }
+
+.button.is-primary:hover {
+  color: #373d48;
+  background: #fff;
+  border: 2px #373d48 solid; }
+
+.button:after {
+  content: '»';
+  padding-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */

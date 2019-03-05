@@ -37,6 +37,7 @@ body {
 /********************************
     Hero
 ********************************/
+
 .hero-body {
     min-height: 200px;
 }
@@ -54,13 +55,16 @@ body {
     color: $blue1;
 }
 
-.title:not(.is-spaced) + .intro-text {
+.title:not(.is-spaced)+.intro-text {
     margin-top: -1.25rem;
 }
+
 /********************************
     Section: Skills
 ********************************/
+
 /* Tabs */
+
 .tabs.is-toggle a {
     font-size: 1.2rem;
     color: $primary;
@@ -79,16 +83,15 @@ body {
 }
 
 .tab-content {
-    padding-top: 30px;
     min-height: 600px;
 }
 
 .tab-content .subtitle {
-    padding: 20px 0;
     margin-bottom: 60px;
 }
 
 /* Progress Bars */
+
 .progress-labels {
     display: flex;
     justify-content: space-between;
@@ -98,9 +101,11 @@ body {
 .progress-labels label {
     font-weight: bold
 }
+
 /********************************
     Section: Projects
 ********************************/
+
 .projects .project .content {
     padding: 20px;
     border-radius: 20px;
@@ -117,9 +122,11 @@ body {
     padding: 20px;
     text-align: left;
 }
+
 /********************************
     Section: Contact
 ********************************/
+
 .contact .container {
     padding: 20px;
     border-radius: 20px;
@@ -175,4 +182,73 @@ body {
         background-clip: initial;
         -webkit-text-fill-color: initial;
     }
+}
+
+/********************************
+    Section: Film Portfolio
+********************************/
+
+.film-portfolio {
+    padding-top: 50px;
+}
+
+
+
+.film-portfolio .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*16:9*/
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.film-portfolio .video-container iframe,
+.film-portfolio .video-container object,
+.film-portfolio .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.film-portfolio .piece .content {
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+// .film-portfolio .details {
+//     min-height: 200px;
+//     padding: 20px;
+//     background: #fff;
+// }
+
+.film-portfolio .details .button {
+    margin-top: 20px;
+}
+
+/********************************
+    Button Styles
+********************************/
+
+.button.is-primary {
+    color: $blue1;
+}
+
+.button.is-primary:active {
+    color: $blue1;
+    background: $primary;
+}
+
+.button.is-primary:hover {
+    color: $primary;
+    background: #fff;;
+    border: 2px $primary solid;;
+}
+
+.button:after {
+    content: '»';
+    padding-left: 10px;
 }
