@@ -11,6 +11,7 @@
 // Brand Colors
 $grey1: #373d48;
 $blue1: #ebfaf8;
+$blue2: #313190;
 
 // Bulma's global variables
 $primary: $grey1;
@@ -48,6 +49,7 @@ body {
 
 .hero.is-dark {
     background-color: $primary;
+    //background: linear-gradient(45deg, $primary, $blue2);
     color: $blue1;
 }
 
@@ -238,14 +240,15 @@ body {
 }
 
 .button.is-primary:active {
+    border: 2px $primary solid;;
     color: $blue1;
     background: $primary;
 }
 
 .button.is-primary:hover {
+    border: 2px $primary solid;
     color: $primary;
-    background: #fff;;
-    border: 2px $primary solid;;
+    background: #fff;
 }
 
 .button:after {

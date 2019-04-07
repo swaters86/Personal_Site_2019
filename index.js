@@ -8,7 +8,6 @@ const languagesObj = {
     'PHP': '90',
     'MySQL': '80',
     'Python': '50',
-    'Node.js': '60',
     'JSON': '90',
     'XML': '95',
 }
@@ -22,7 +21,47 @@ const softwareObj = {
     'Eclipse': '80',
 }
 
-const toolsObj = {
+// const toolsObj = {
+//     'GIT': '60',
+//     'SVN': '60',
+//     'Webpack': '50',
+//     'Gulp.js': '50',
+//     'NPM': '60',
+//     'Developer Tools': '70',
+// }
+
+// const frameworksObj = {
+//     'Vue.js': '40',
+//     'Yii 1.1': '90',
+//     'Yii 2': '80',
+//     'Wordpress': '70',
+//     'Express.js': '50'
+// }
+
+// const librariesObj = {
+//     'jQuery': '85',
+//     'React': '50',
+//     'Pug': '70',
+// }
+
+const otherObj = {
+    'jQuery': '85',
+    'React': '50',
+    'Pug': '70',
+    'Node.js': '55',
+    'SEO': '60',
+    'A11y': '60',
+    'Email Tempalate Deveopment': '65',
+    'Documentation': '90',
+    'Graphic Design': '90',
+    'Organization': '80',
+    'Attention to Detail': '90',
+    'QA': '70',
+    'Vue.js': '40',
+    'Yii 1.1': '90',
+    'Yii 2': '80',
+    'Wordpress': '70',
+    'Express.js': '50',
     'GIT': '60',
     'SVN': '60',
     'Webpack': '50',
@@ -31,30 +70,7 @@ const toolsObj = {
     'Developer Tools': '70',
 }
 
-const frameworksObj = {
-    'Vue.js': '40',
-    'Yii 1.1': '90',
-    'Yii 2': '80',
-    'Wordpress': '70',
-    'Express.js': '50'
-}
-
-const librariesObj = {
-    'React': '50',
-    'Pug': '70',
-}
-
-const otherObj = {
-    'SEO': '60',
-    'Email Tempalates': '60',
-    'Documentation': '90',
-    'Graphic Design': '90',
-    'Organization': '80',
-    'Attention to Detail': '90',
-    'QA': '70',
-}
-
-Object.assign(otherObj, librariesObj, frameworksObj, toolsObj);
+//Object.assign(otherObj, librariesObj, frameworksObj, toolsObj);
 
 const skillsObj = {
     languages: languagesObj,

@@ -3596,13 +3596,14 @@ body {
   color: #ebfaf8; }
 
 .button.is-primary:active {
+  border: 2px #373d48 solid;
   color: #ebfaf8;
   background: #373d48; }
 
 .button.is-primary:hover {
+  border: 2px #373d48 solid;
   color: #373d48;
-  background: #fff;
-  border: 2px #373d48 solid; }
+  background: #fff; }
 
 .button:after {
   content: '»';

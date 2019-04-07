@@ -25,19 +25,6 @@ section(class="section has-text-centered")
                         span(class="label has-text-primary")=skillLevel + "%"
                     progress(class="progress is-primary is-large", value=skillLevel, max="100")= skillLevel
             - i++
-section(class="section has-text-centered projects")
-    div(class="container")
-        h2(class="title is-2 has-text-primary") Projects
-        p(class="subtitle has-text-primary") I'm currently working on <strong><em>new</em></strong> projects so they can be added to this section!
-        div(class="columns is-7" style="flex-wrap: wrap")
-            each project in projects
-                div(class="project column is-4")
-                        div(class="content")
-                            figure(class="image")
-                                img(class="screenshot", src='images/screenshots-resized/' + project.thumbnailFileName + '.png', alt=project.altText)
-                            div(class="details")
-                                p(class="description-text")= project.descriptionText
-                                a(class="button is-primary is-rounded", href=project.url, title=project.linkTitleText)=project.linkText
 section(class="section contact")
     h2(class="title is-2 has-text-primary has-text-centered") Get in Touch
     div(class="container")
