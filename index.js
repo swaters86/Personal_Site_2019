@@ -4,12 +4,13 @@ const fs = require('fs');
 const languagesObj = {
     'HTML5': '95',
     'CSS3': '90',
-    'ES6': '70',
-    'PHP': '90',
+    'JavaScript': '70',
+    'PHP': '80',
     'MySQL': '80',
     'Python': '50',
     'JSON': '90',
     'XML': '95',
+    'C#' : '50',
 }
 
 const softwareObj = {
@@ -116,7 +117,6 @@ fs.writeFile("site/index.html", indexPage, function (err) {
 
     console.log("The file was saved!");
 });
-
 
 fs.writeFile("site/films.html", filmsPage, function (err) {
     if (err) {

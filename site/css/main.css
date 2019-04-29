@@ -1694,131 +1694,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .buttons.is-right {
     justify-content: flex-end; }
 
-.progress {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  border-radius: 290486px;
-  display: block;
-  height: 1rem;
-  overflow: hidden;
-  padding: 0;
-  width: 100%; }
-  .progress::-webkit-progress-bar {
-    background-color: #dbdbdb; }
-  .progress::-webkit-progress-value {
-    background-color: #4a4a4a; }
-  .progress::-moz-progress-bar {
-    background-color: #4a4a4a; }
-  .progress::-ms-fill {
-    background-color: #4a4a4a;
-    border: none; }
-  .progress:indeterminate {
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: moveIndeterminate;
-    animation-timing-function: linear;
-    background-color: #dbdbdb;
-    background-image: linear-gradient(to right, #4a4a4a 30%, #dbdbdb 30%);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 150% 150%; }
-    .progress:indeterminate::-webkit-progress-bar {
-      background-color: transparent; }
-    .progress:indeterminate::-moz-progress-bar {
-      background-color: transparent; }
-  .progress.is-white::-webkit-progress-value {
-    background-color: white; }
-  .progress.is-white::-moz-progress-bar {
-    background-color: white; }
-  .progress.is-white::-ms-fill {
-    background-color: white; }
-  .progress.is-white:indeterminate {
-    background-image: linear-gradient(to right, white 30%, #dbdbdb 30%); }
-  .progress.is-black::-webkit-progress-value {
-    background-color: #0a0a0a; }
-  .progress.is-black::-moz-progress-bar {
-    background-color: #0a0a0a; }
-  .progress.is-black::-ms-fill {
-    background-color: #0a0a0a; }
-  .progress.is-black:indeterminate {
-    background-image: linear-gradient(to right, #0a0a0a 30%, #dbdbdb 30%); }
-  .progress.is-light::-webkit-progress-value {
-    background-color: whitesmoke; }
-  .progress.is-light::-moz-progress-bar {
-    background-color: whitesmoke; }
-  .progress.is-light::-ms-fill {
-    background-color: whitesmoke; }
-  .progress.is-light:indeterminate {
-    background-image: linear-gradient(to right, whitesmoke 30%, #dbdbdb 30%); }
-  .progress.is-dark::-webkit-progress-value {
-    background-color: #363636; }
-  .progress.is-dark::-moz-progress-bar {
-    background-color: #363636; }
-  .progress.is-dark::-ms-fill {
-    background-color: #363636; }
-  .progress.is-dark:indeterminate {
-    background-image: linear-gradient(to right, #363636 30%, #dbdbdb 30%); }
-  .progress.is-primary::-webkit-progress-value {
-    background-color: #373d48; }
-  .progress.is-primary::-moz-progress-bar {
-    background-color: #373d48; }
-  .progress.is-primary::-ms-fill {
-    background-color: #373d48; }
-  .progress.is-primary:indeterminate {
-    background-image: linear-gradient(to right, #373d48 30%, #dbdbdb 30%); }
-  .progress.is-link::-webkit-progress-value {
-    background-color: #3273dc; }
-  .progress.is-link::-moz-progress-bar {
-    background-color: #3273dc; }
-  .progress.is-link::-ms-fill {
-    background-color: #3273dc; }
-  .progress.is-link:indeterminate {
-    background-image: linear-gradient(to right, #3273dc 30%, #dbdbdb 30%); }
-  .progress.is-info::-webkit-progress-value {
-    background-color: #209cee; }
-  .progress.is-info::-moz-progress-bar {
-    background-color: #209cee; }
-  .progress.is-info::-ms-fill {
-    background-color: #209cee; }
-  .progress.is-info:indeterminate {
-    background-image: linear-gradient(to right, #209cee 30%, #dbdbdb 30%); }
-  .progress.is-success::-webkit-progress-value {
-    background-color: #23d160; }
-  .progress.is-success::-moz-progress-bar {
-    background-color: #23d160; }
-  .progress.is-success::-ms-fill {
-    background-color: #23d160; }
-  .progress.is-success:indeterminate {
-    background-image: linear-gradient(to right, #23d160 30%, #dbdbdb 30%); }
-  .progress.is-warning::-webkit-progress-value {
-    background-color: #ffdd57; }
-  .progress.is-warning::-moz-progress-bar {
-    background-color: #ffdd57; }
-  .progress.is-warning::-ms-fill {
-    background-color: #ffdd57; }
-  .progress.is-warning:indeterminate {
-    background-image: linear-gradient(to right, #ffdd57 30%, #dbdbdb 30%); }
-  .progress.is-danger::-webkit-progress-value {
-    background-color: #ff3860; }
-  .progress.is-danger::-moz-progress-bar {
-    background-color: #ff3860; }
-  .progress.is-danger::-ms-fill {
-    background-color: #ff3860; }
-  .progress.is-danger:indeterminate {
-    background-image: linear-gradient(to right, #ff3860 30%, #dbdbdb 30%); }
-  .progress.is-small {
-    height: 0.75rem; }
-  .progress.is-medium {
-    height: 1.25rem; }
-  .progress.is-large {
-    height: 1.5rem; }
-
-@keyframes moveIndeterminate {
-  from {
-    background-position: 200% 0; }
-  to {
-    background-position: -200% 0; } }
 .container {
   margin: 0 auto;
   position: relative; }
@@ -2670,6 +2545,217 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .control.is-loading.is-large:after {
     font-size: 1.5rem; }
 
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem; }
+  .icon.is-small {
+    height: 1rem;
+    width: 1rem; }
+  .icon.is-medium {
+    height: 2rem;
+    width: 2rem; }
+  .icon.is-large {
+    height: 3rem;
+    width: 3rem; }
+
+.progress {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 290486px;
+  display: block;
+  height: 1rem;
+  overflow: hidden;
+  padding: 0;
+  width: 100%; }
+  .progress::-webkit-progress-bar {
+    background-color: #dbdbdb; }
+  .progress::-webkit-progress-value {
+    background-color: #4a4a4a; }
+  .progress::-moz-progress-bar {
+    background-color: #4a4a4a; }
+  .progress::-ms-fill {
+    background-color: #4a4a4a;
+    border: none; }
+  .progress:indeterminate {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: moveIndeterminate;
+    animation-timing-function: linear;
+    background-color: #dbdbdb;
+    background-image: linear-gradient(to right, #4a4a4a 30%, #dbdbdb 30%);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 150% 150%; }
+    .progress:indeterminate::-webkit-progress-bar {
+      background-color: transparent; }
+    .progress:indeterminate::-moz-progress-bar {
+      background-color: transparent; }
+  .progress.is-white::-webkit-progress-value {
+    background-color: white; }
+  .progress.is-white::-moz-progress-bar {
+    background-color: white; }
+  .progress.is-white::-ms-fill {
+    background-color: white; }
+  .progress.is-white:indeterminate {
+    background-image: linear-gradient(to right, white 30%, #dbdbdb 30%); }
+  .progress.is-black::-webkit-progress-value {
+    background-color: #0a0a0a; }
+  .progress.is-black::-moz-progress-bar {
+    background-color: #0a0a0a; }
+  .progress.is-black::-ms-fill {
+    background-color: #0a0a0a; }
+  .progress.is-black:indeterminate {
+    background-image: linear-gradient(to right, #0a0a0a 30%, #dbdbdb 30%); }
+  .progress.is-light::-webkit-progress-value {
+    background-color: whitesmoke; }
+  .progress.is-light::-moz-progress-bar {
+    background-color: whitesmoke; }
+  .progress.is-light::-ms-fill {
+    background-color: whitesmoke; }
+  .progress.is-light:indeterminate {
+    background-image: linear-gradient(to right, whitesmoke 30%, #dbdbdb 30%); }
+  .progress.is-dark::-webkit-progress-value {
+    background-color: #363636; }
+  .progress.is-dark::-moz-progress-bar {
+    background-color: #363636; }
+  .progress.is-dark::-ms-fill {
+    background-color: #363636; }
+  .progress.is-dark:indeterminate {
+    background-image: linear-gradient(to right, #363636 30%, #dbdbdb 30%); }
+  .progress.is-primary::-webkit-progress-value {
+    background-color: #373d48; }
+  .progress.is-primary::-moz-progress-bar {
+    background-color: #373d48; }
+  .progress.is-primary::-ms-fill {
+    background-color: #373d48; }
+  .progress.is-primary:indeterminate {
+    background-image: linear-gradient(to right, #373d48 30%, #dbdbdb 30%); }
+  .progress.is-link::-webkit-progress-value {
+    background-color: #3273dc; }
+  .progress.is-link::-moz-progress-bar {
+    background-color: #3273dc; }
+  .progress.is-link::-ms-fill {
+    background-color: #3273dc; }
+  .progress.is-link:indeterminate {
+    background-image: linear-gradient(to right, #3273dc 30%, #dbdbdb 30%); }
+  .progress.is-info::-webkit-progress-value {
+    background-color: #209cee; }
+  .progress.is-info::-moz-progress-bar {
+    background-color: #209cee; }
+  .progress.is-info::-ms-fill {
+    background-color: #209cee; }
+  .progress.is-info:indeterminate {
+    background-image: linear-gradient(to right, #209cee 30%, #dbdbdb 30%); }
+  .progress.is-success::-webkit-progress-value {
+    background-color: #23d160; }
+  .progress.is-success::-moz-progress-bar {
+    background-color: #23d160; }
+  .progress.is-success::-ms-fill {
+    background-color: #23d160; }
+  .progress.is-success:indeterminate {
+    background-image: linear-gradient(to right, #23d160 30%, #dbdbdb 30%); }
+  .progress.is-warning::-webkit-progress-value {
+    background-color: #ffdd57; }
+  .progress.is-warning::-moz-progress-bar {
+    background-color: #ffdd57; }
+  .progress.is-warning::-ms-fill {
+    background-color: #ffdd57; }
+  .progress.is-warning:indeterminate {
+    background-image: linear-gradient(to right, #ffdd57 30%, #dbdbdb 30%); }
+  .progress.is-danger::-webkit-progress-value {
+    background-color: #ff3860; }
+  .progress.is-danger::-moz-progress-bar {
+    background-color: #ff3860; }
+  .progress.is-danger::-ms-fill {
+    background-color: #ff3860; }
+  .progress.is-danger:indeterminate {
+    background-image: linear-gradient(to right, #ff3860 30%, #dbdbdb 30%); }
+  .progress.is-small {
+    height: 0.75rem; }
+  .progress.is-medium {
+    height: 1.25rem; }
+  .progress.is-large {
+    height: 1.5rem; }
+
+@keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0; }
+  to {
+    background-position: -200% 0; } }
+.title,
+.subtitle {
+  word-break: break-word; }
+  .title em,
+  .title span,
+  .subtitle em,
+  .subtitle span {
+    font-weight: inherit; }
+  .title sub,
+  .subtitle sub {
+    font-size: 0.75em; }
+  .title sup,
+  .subtitle sup {
+    font-size: 0.75em; }
+  .title .tag,
+  .subtitle .tag {
+    vertical-align: middle; }
+
+.title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125; }
+  .title strong {
+    color: inherit;
+    font-weight: inherit; }
+  .title + .highlight {
+    margin-top: -0.75rem; }
+  .title:not(.is-spaced) + .subtitle {
+    margin-top: -1.25rem; }
+  .title.is-1 {
+    font-size: 3rem; }
+  .title.is-2 {
+    font-size: 2.5rem; }
+  .title.is-3 {
+    font-size: 2rem; }
+  .title.is-4 {
+    font-size: 1.5rem; }
+  .title.is-5 {
+    font-size: 1.25rem; }
+  .title.is-6 {
+    font-size: 1rem; }
+  .title.is-7 {
+    font-size: 0.75rem; }
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25; }
+  .subtitle strong {
+    color: #363636;
+    font-weight: 600; }
+  .subtitle:not(.is-spaced) + .title {
+    margin-top: -1.25rem; }
+  .subtitle.is-1 {
+    font-size: 3rem; }
+  .subtitle.is-2 {
+    font-size: 2.5rem; }
+  .subtitle.is-3 {
+    font-size: 2rem; }
+  .subtitle.is-4 {
+    font-size: 1.5rem; }
+  .subtitle.is-5 {
+    font-size: 1.25rem; }
+  .subtitle.is-6 {
+    font-size: 1rem; }
+  .subtitle.is-7 {
+    font-size: 0.75rem; }
+
 .is-clearfix::after {
   clear: both;
   content: " ";
@@ -3366,76 +3452,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .is-shadowless {
   box-shadow: none !important; }
 
-.title,
-.subtitle {
-  word-break: break-word; }
-  .title em,
-  .title span,
-  .subtitle em,
-  .subtitle span {
-    font-weight: inherit; }
-  .title sub,
-  .subtitle sub {
-    font-size: 0.75em; }
-  .title sup,
-  .subtitle sup {
-    font-size: 0.75em; }
-  .title .tag,
-  .subtitle .tag {
-    vertical-align: middle; }
-
-.title {
-  color: #363636;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.125; }
-  .title strong {
-    color: inherit;
-    font-weight: inherit; }
-  .title + .highlight {
-    margin-top: -0.75rem; }
-  .title:not(.is-spaced) + .subtitle {
-    margin-top: -1.25rem; }
-  .title.is-1 {
-    font-size: 3rem; }
-  .title.is-2 {
-    font-size: 2.5rem; }
-  .title.is-3 {
-    font-size: 2rem; }
-  .title.is-4 {
-    font-size: 1.5rem; }
-  .title.is-5 {
-    font-size: 1.25rem; }
-  .title.is-6 {
-    font-size: 1rem; }
-  .title.is-7 {
-    font-size: 0.75rem; }
-
-.subtitle {
-  color: #4a4a4a;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.25; }
-  .subtitle strong {
-    color: #363636;
-    font-weight: 600; }
-  .subtitle:not(.is-spaced) + .title {
-    margin-top: -1.25rem; }
-  .subtitle.is-1 {
-    font-size: 3rem; }
-  .subtitle.is-2 {
-    font-size: 2.5rem; }
-  .subtitle.is-3 {
-    font-size: 2rem; }
-  .subtitle.is-4 {
-    font-size: 1.5rem; }
-  .subtitle.is-5 {
-    font-size: 1.25rem; }
-  .subtitle.is-6 {
-    font-size: 1rem; }
-  .subtitle.is-7 {
-    font-size: 0.75rem; }
-
 html {
   background: #ebfaf8; }
 
@@ -3608,5 +3624,19 @@ body {
 .button:after {
   content: '»';
   padding-left: 10px; }
+
+/********************************
+    Icon Styles
+********************************/
+.icon.is-large {
+  width: 30px;
+  height: 30px; }
+
+/* Fixes glitch in Firefox that was causing the icons to disappear */
+.icon {
+  align-items: unset; }
+
+.icon span:nth-child(2) {
+  padding: 6px 0 0 10px; }
 
 /*# sourceMappingURL=main.css.map */

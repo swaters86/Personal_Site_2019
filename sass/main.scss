@@ -20,12 +20,14 @@ $primary: $grey1;
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/progress.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/form.sass";
-@import "../node_modules/bulma/sass/base/helpers.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/progress.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/base/helpers.sass";
 
+// Test
 html {
     background: $blue1;
 }
@@ -49,7 +51,6 @@ body {
 
 .hero.is-dark {
     background-color: $primary;
-    //background: linear-gradient(45deg, $primary, $blue2);
     color: $blue1;
 }
 
@@ -194,8 +195,6 @@ body {
     padding-top: 50px;
 }
 
-
-
 .film-portfolio .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -220,12 +219,6 @@ body {
     border-radius: 20px;
     background: #fff;
 }
-
-// .film-portfolio .details {
-//     min-height: 200px;
-//     padding: 20px;
-//     background: #fff;
-// }
 
 .film-portfolio .details .button {
     margin-top: 20px;
@@ -254,4 +247,22 @@ body {
 .button:after {
     content: '»';
     padding-left: 10px;
+}
+
+/********************************
+    Icon Styles
+********************************/
+
+.icon.is-large {
+    width: 30px;
+    height: 30px;
+}
+
+/* Fixes glitch in Firefox that was causing the icons to disappear */
+.icon {
+    align-items: unset;
+}
+
+.icon span:nth-child(2) {
+    padding: 6px 0 0 10px;
 }
