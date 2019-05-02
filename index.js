@@ -11,7 +11,7 @@ const languagesObj = {
     'JSON': '90',
     'XML': '95',
     'C#' : '50',
-}
+};
 
 const softwareObj = {
     'Adobe Illustrator': '90',
@@ -20,7 +20,7 @@ const softwareObj = {
     'Adobe Premier': '40',
     'Visual Studio Code': '70',
     'Eclipse': '80',
-}
+};
 
 // const toolsObj = {
 //     'GIT': '60',
@@ -29,7 +29,7 @@ const softwareObj = {
 //     'Gulp.js': '50',
 //     'NPM': '60',
 //     'Developer Tools': '70',
-// }
+// };
 
 // const frameworksObj = {
 //     'Vue.js': '40',
@@ -37,13 +37,13 @@ const softwareObj = {
 //     'Yii 2': '80',
 //     'Wordpress': '70',
 //     'Express.js': '50'
-// }
+// };
 
 // const librariesObj = {
 //     'jQuery': '85',
 //     'React': '50',
 //     'Pug': '70',
-// }
+// };
 
 const otherObj = {
     'jQuery': '85',
@@ -69,7 +69,7 @@ const otherObj = {
     'Gulp.js': '50',
     'NPM': '60',
     'Developer Tools': '70',
-}
+};
 
 //Object.assign(otherObj, librariesObj, frameworksObj, toolsObj);
 
@@ -77,7 +77,7 @@ const skillsObj = {
     languages: languagesObj,
     software: softwareObj,
     other: otherObj,
-}
+};
 
 const projectsObj = [
     {
@@ -129,7 +129,7 @@ const projectsObj = [
         linkTitleText: 'Dog Lover Hover Effect',
         linkText: 'Visit Codepen',
     },
-]
+];
 
 let indexPage = pug.renderFile('templates/index.pug', {
     skills: skillsObj,

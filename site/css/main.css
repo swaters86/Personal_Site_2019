@@ -3492,18 +3492,12 @@ a.navbar-item-logo.is-active,
 .hero-body {
   min-height: 200px; }
 
-.hero-body .title {
-  font-size: 10em; }
+.intro-text {
+  padding: 50px 0 0 0; }
 
 .hero.is-dark {
   background-color: #373d48;
   color: #ebfaf8; }
-
-.hero.is-dark .title {
-  color: #ebfaf8; }
-
-.title:not(.is-spaced) + .intro-text {
-  margin-top: -1.25rem; }
 
 /********************************
     Section: Skills
@@ -3577,9 +3571,6 @@ a.navbar-item-logo.is-active,
   box-shadow: initial; }
 
 @media (max-width: 486px) {
-  .hero-body .title {
-    font-size: 6rem; }
-
   .projects .project .description-text {
     height: 200px; } }
 @media (max-width: 425px) {
