@@ -1,9 +1,41 @@
-section(class="hero is-dark has-text-centered")
+nav(class="navbar is-fixed-top", role="navigation", aria-label="main navigation")
+ div(class="container")  
+   div(class="navbar-brand")
+     a(class="navbar-item navbar-item-logo", href="http://stevenwaters.com")
+       strong &lt;SW /&gt;
+     a(id="navbar-burger", role="button", class="navbar-burger burger", aria-label="menu", aria-expanded="false", data-target="navbarBasicExample")
+       span(aria-hidden="true")
+       span(aria-hidden="true")
+       span(aria-hidden="true")
+   div(id="navbarBasicExample", class="navbar-menu")
+     div(class="navbar-start")
+       a(href="#home", class="navbar-item") Home
+       a(href="#projects", class="navbar-item") Projects
+       a(href="#skills", class="navbar-item") Skills
+       a(href="#contact", class="navbar-item") Get in Touch
+section(id="home", class="hero is-dark has-text-centered")
     div(class="hero-body")
         div(class="container")
             h1(class="title") Hello.
             p(class="is-size-2 is-size-5-mobile") My name is Steven Waters. I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
-section(class="section has-text-centered")
+section(id="projects", class="section")
+    div(class="container")
+     h2(class="title is-2 has-text-primary has-text-centered") Latest Projects
+     div(class="columns is-multiline")
+      - var i = 0
+      each project in projects
+       div(class="column is-6")
+        div(class="card")
+         header(class="card-header")
+          h4(class="title is-4 card-header-title")
+           a(href=project.link, title=project.title)=project.title
+         div(class="card-image")
+          figure(class="image")
+           a(href=project.link, title=project.title)
+            img(src="images/app-screenshots/" + project.thumbnailUrl + ".png", alt=project.thumbnailAltText)
+         div(class="card-content is-size-5")
+          div(class="content") !{project.description}
+section(id="skills", class="section has-text-centered")
     div(class="container")
         h2(class="title is-2 has-text-primary") Skills
         div(class="tabs is-toggle is-toggle-rounded")
@@ -18,14 +50,14 @@ section(class="section has-text-centered")
         each categoryObj, categoryName in skills
             - var classList = (i === 0) ? "tab-content is-active" : "tab-content"
             div(id="tab-" + i, class=classList)
-                h3(class="title is-3 is-capitalized has-text-primary ")=categoryName
+                h3(class="title is-3 is-capitalized has-text-primary")=categoryName
                 each skillLevel, name in categoryObj
                     div(class="progress-labels")
                         span(class="label has-text-primary")=name
                         span(class="label has-text-primary")=skillLevel + "%"
                     progress(class="progress is-primary is-large", value=skillLevel, max="100")= skillLevel
             - i++
-section(class="section contact")
+section(id="contact", class="section contact")
     h2(class="title is-2 has-text-primary has-text-centered") Get in Touch
     div(class="container")
         div(class="columns")

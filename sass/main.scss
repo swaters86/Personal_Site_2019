@@ -15,6 +15,7 @@ $blue2: #313190;
 
 // Bulma's global variables
 $primary: $grey1;
+$secondary: $blue1;
 
 // Import Bulma Components
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -29,11 +30,43 @@ $primary: $grey1;
 
 // Test
 html {
-    background: $blue1;
+    background: $secondary;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: $primary;
+}
+
+/********************************
+    Navigation
+********************************/
+.navbar {
+    margin-bottom: 20px;
+    background-color: $secondary;
+    border-bottom: 2px $primary solid;
+}
+
+.navbar-item {
+    color: $primary;
+}
+
+a.navbar-item:hover, 
+a.navbar-item.is-active, 
+.navbar-link:hover, 
+.navbar-link.is-active {
+    background-color: $primary;
+    color: $secondary;
+}
+
+a.navbar-item-logo {
+    font-size: 1.5em;
+}
+
+a.navbar-item-logo:hover, 
+a.navbar-item-logo.is-active, 
+.navbar-link-logo:hover, 
+.navbar-link-logo.is-active {
     color: $primary;
 }
 
@@ -51,14 +84,14 @@ body {
 
 .hero.is-dark {
     background-color: $primary;
-    color: $blue1;
+    color: $secondary;
 }
 
 .hero.is-dark .title {
-    color: $blue1;
+    color: $secondary;
 }
 
-.title:not(.is-spaced)+.intro-text {
+.title:not(.is-spaced) + .intro-text {
     margin-top: -1.25rem;
 }
 
@@ -82,7 +115,7 @@ body {
 .tabs.is-toggle a:hover,
 .tabs.is-toggle li.is-active a {
     background: $primary;
-    color: $blue1;
+    color: $secondary;
 }
 
 .tab-content {
@@ -229,12 +262,12 @@ body {
 ********************************/
 
 .button.is-primary {
-    color: $blue1;
+    color: $secondary;
 }
 
 .button.is-primary:active {
     border: 2px $primary solid;;
-    color: $blue1;
+    color: $secondary;
     background: $primary;
 }
 
@@ -265,4 +298,12 @@ body {
 
 .icon span:nth-child(2) {
     padding: 6px 0 0 10px;
+}
+
+/********************************
+    Misc
+********************************/
+
+.title.is-2 {
+    margin-top: 20px;
 }

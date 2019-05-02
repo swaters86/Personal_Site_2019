@@ -3460,6 +3460,33 @@ body {
   color: #373d48; }
 
 /********************************
+    Navigation
+********************************/
+.navbar {
+  margin-bottom: 20px;
+  background-color: #ebfaf8;
+  border-bottom: 2px #373d48 solid; }
+
+.navbar-item {
+  color: #373d48; }
+
+a.navbar-item:hover,
+a.navbar-item.is-active,
+.navbar-link:hover,
+.navbar-link.is-active {
+  background-color: #373d48;
+  color: #ebfaf8; }
+
+a.navbar-item-logo {
+  font-size: 1.5em; }
+
+a.navbar-item-logo:hover,
+a.navbar-item-logo.is-active,
+.navbar-link-logo:hover,
+.navbar-link-logo.is-active {
+  color: #373d48; }
+
+/********************************
     Hero
 ********************************/
 .hero-body {
@@ -3638,5 +3665,11 @@ body {
 
 .icon span:nth-child(2) {
   padding: 6px 0 0 10px; }
+
+/********************************
+    Misc
+********************************/
+.title.is-2 {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */

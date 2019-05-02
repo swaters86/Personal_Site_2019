@@ -81,21 +81,52 @@ const skillsObj = {
 
 const projectsObj = [
     {
-        title: 'CSS Terminal',
-        thumbnailFileName: 'css_terminal',
-        altText: 'Screenshot of the CSS Terminal Codepen project',
-        descriptionText: 'A basic cli tool that I made using HTML5, CSS3, and ES6. The goal is to make it interactive someday.',
-        url: 'https://codepen.io/swaters86/full/XjBPdp',
-        linkTitleText: 'See a demo of the CSS Terminal application on Codepen.io',
+        title: 'I am Batman FAQ React App',
+        thumbnailUrl: 'i-am-batman-accordion',
+        thumbnailAltText: 'A screenshot of a FAQ list that contains questions that are related to Batman.',
+        description: `This is an accordion / FAQ solution made with <strong>React</strong> and <strong>Sass</strong>. 
+        The main component tag can accept a boolean attribute called "allowMultipleOpen" which allows multiple accordion 
+        panes to be open simultaneously or only allow one to be open at the time (when the boolean attribute is absent). The 
+        questions are also generated from a JSON string so the content can be changed easily and the solution is flexible 
+        enough so new themes can be added by defining the primary, secondary, and tertiary color and animations and 
+        the collapsed/uncollapsed icons within a SASS switch statement. <strong>Hint</strong>: Try the Adam West theme.`,
+        link: 'https://codepen.io/swaters86/pen/MxdvKP',
+        linkTitleText: 'Check out I am Batman FAQ React App',
         linkText: 'Visit Codepen',
     },
     {
-        title: 'A Web-Based Recreation of the Ozark Title Sequence',
-        thumbnailFileName: 'ozark_title_seq_reproduction',
-        altText: 'Screenshot of the Ozark Title Sequence Codepen project',
-        descriptionText: 'This is a web-based / SVG experimentation of Ozark\'s title sequence. Each episode displays a different symbol depending on the story, so I made this so the Font Awesome symbols can be swaped out easily.',
-        url: 'https://codepen.io/swaters86/full/PdpXKa',
-        linkTitleText: 'See a demo of the Ozark title sequence recreation on Codepen.io',
+        title: 'This Website',
+        thumbnailUrl: 'steven-waters-website',
+        thumbnailAltText: 'This Website',
+        description: `I went through to several designs before arriving at this design. This is my "Less is More" design. 
+        I initially started it without using a CSS framework but then decided to port it to Bulma. I also use Sass 
+        and Node.js for generating the static files. In other words, the Node.js app that I created serves a simple static site generator.
+        The <a href="#" title="Steve Waters.com GitHub Repo">code</a> for this website can be found 
+        <a href="#" title="Steve Waters.com GitHub Repo">here</a>`,
+        link: 'http://stevenwaters.com/',
+        linkTitleText: '',
+        linkText: 'Visit Codepen',
+    },
+    {
+        title: 'Random.me React Interface',
+        thumbnailUrl: 'random-me-api',
+        thumbnailAltText: `A screenshot of a 3 by 2 layout of cards. Each card display user\'s name , address,
+        and email information. Each card can be updated by clicking on a button.`,
+        description: `I wanted to make something <strong>API-related</strong> with <strong>React</strong> so I developed
+        this application. This application uses the Random.me API to generate a list of users. Users are kept track of
+        in a state object. I made very good use out of the spread operator for this one!`,
+        link: 'https://codepen.io/swaters86/pen/zXagyz',
+        linkTitleText: 'Random.me React Interface',
+        linkText: 'Visit Codepen',
+    },
+    {
+        title: 'Dog Lover Hover Effect',
+        thumbnailUrl: 'dog-lover',
+        thumbnailAltText: 'A layout out of dog pictures that displays the text Pick Me when you roll your mouse over one of them',
+        description: `I wanted to make a cool in/out zoom effect for images and ended up with this. All of the scaling and 
+        rollover effects are CSS-driven.`,
+        link: 'https://codepen.io/swaters86/pen/axxpob',
+        linkTitleText: 'Dog Lover Hover Effect',
         linkText: 'Visit Codepen',
     },
 ]
