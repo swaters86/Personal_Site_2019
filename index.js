@@ -83,7 +83,7 @@ const projectsObj = [
     {
         title: 'I am Batman FAQ React App',
         thumbnailUrl: 'i-am-batman-accordion',
-        thumbnailAltText: 'A screenshot of a FAQ list that contains questions that are related to Batman.',
+        thumbnailAltText: '',
         description: `This is an accordion / FAQ solution made with <strong>React</strong> and <strong>Sass</strong>. 
         The main component tag can accept a boolean attribute called "allowMultipleOpen" which allows multiple accordion 
         panes to be open simultaneously or only allow one to be open at the time (when the boolean attribute is absent). The 
@@ -95,14 +95,14 @@ const projectsObj = [
         linkText: 'Visit Codepen',
     },
     {
-        title: 'This Website',
+        title: 'Stevenwaters.com',
         thumbnailUrl: 'steven-waters-website',
-        thumbnailAltText: 'This Website',
+        thumbnailAltText: '',
         description: `I went through to several designs before arriving at this design. This is my "Less is More" design. 
-        I initially started it without using a CSS framework but then decided to port it to Bulma. I also use Sass 
-        and Node.js for generating the static files. In other words, the Node.js app that I created serves a simple static site generator.
-        The <a href="#" title="Steve Waters.com GitHub Repo">code</a> for this website can be found 
-        <a href="#" title="Steve Waters.com GitHub Repo">here</a>`,
+        I initially started it without using a CSS framework but then decided to port it to <strong>Bulma</strong>. I also use <strong>Sass</strong> 
+        and <strong>Node.js</strong> for generating the static files. In other words, the Node.js app that I created serves a simple static site generator.
+        The <a href="https://github.com/swaters86/Personal_Site_2019" title="Steve Waters.com GitHub Repo">code</a> for this website can be found 
+        <a href="https://github.com/swaters86/Personal_Site_2019" title="Steve Waters.com GitHub Repo">here</a>`,
         link: 'http://stevenwaters.com/',
         linkTitleText: '',
         linkText: 'Visit Codepen',
@@ -110,8 +110,7 @@ const projectsObj = [
     {
         title: 'Random.me React Interface',
         thumbnailUrl: 'random-me-api',
-        thumbnailAltText: `A screenshot of a 3 by 2 layout of cards. Each card display user\'s name , address,
-        and email information. Each card can be updated by clicking on a button.`,
+        thumbnailAltText: '',
         description: `I wanted to make something <strong>API-related</strong> with <strong>React</strong> so I developed
         this application. This application uses the Random.me API to generate a list of users. Users are kept track of
         in a state object. I made very good use out of the spread operator for this one!`,
@@ -120,9 +119,9 @@ const projectsObj = [
         linkText: 'Visit Codepen',
     },
     {
-        title: 'Dog Lover Hover Effect',
+        title: 'Dog Lover Hover Effect <span class="tag">WIP</span>',
         thumbnailUrl: 'dog-lover',
-        thumbnailAltText: 'A layout out of dog pictures that displays the text Pick Me when you roll your mouse over one of them',
+        thumbnailAltText: '',
         description: `I wanted to make a cool in/out zoom effect for images and ended up with this. All of the scaling and 
         rollover effects are CSS-driven.`,
         link: 'https://codepen.io/swaters86/pen/axxpob',

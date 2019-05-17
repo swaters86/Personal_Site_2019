@@ -1,22 +1,23 @@
-nav(class="navbar is-fixed-top", role="navigation", aria-label="main navigation")
- div(class="container")  
-   div(class="navbar-brand")
-     a(class="navbar-item navbar-item-logo", href="http://stevenwaters.com")
-       strong &lt;SW /&gt;
-     a(id="navbar-burger", role="button", class="navbar-burger burger", aria-label="menu", aria-expanded="false", data-target="navbarBasicExample")
-       span(aria-hidden="true")
-       span(aria-hidden="true")
-       span(aria-hidden="true")
-   div(id="navbarBasicExample", class="navbar-menu")
-     div(class="navbar-start")
-       a(href="#home", class="navbar-item") Home
-       a(href="#projects", class="navbar-item") Projects
-       a(href="#skills", class="navbar-item") Skills
-       a(href="#contact", class="navbar-item") Get in Touch
-section(id="home", class="hero is-dark has-text-centered")
+div(class="container")
+ nav(class="navbar is-fixed-top", role="navigation", aria-label="main navigation")
+  div(class="container")  
+    div(class="navbar-brand")
+      a(class="navbar-item navbar-item-logo", href="http://stevenwaters.com")
+        strong &lt;SW /&gt;
+      a(id="navbar-burger", role="button", class="navbar-burger burger", aria-label="menu", aria-expanded="false", data-target="navbarBasicExample")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+    div(id="navbarBasicExample", class="navbar-menu")
+      div(class="navbar-start")
+        a(href="#home", class="navbar-item") Home
+        a(href="#projects", class="navbar-item") Projects
+        a(href="#skills", class="navbar-item") Skills
+        a(href="#contact", class="navbar-item") Get in Touch
+section(id="home", class="hero is-dark")
     div(class="hero-body")
-        div(class="container")
-            p(class="intro-text is-size-2 is-size-5-mobile") <strong>Howdy!</strong> My name is Steven Waters. I'm a full-stack developer with a passion for front-end development, UI, and UX. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
+        div(class="container has-text-centered")
+         p(class="intro-text is-size-2 is-size-5-mobile") <strong>Howdy!</strong> My name is Steven Waters. I'm a full-stack developer with a passion for front-end development, UI, UX, and technical support. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
 section(id="projects", class="section")
     div(class="container")
      h2(class="title is-2 has-text-primary has-text-centered") Latest Projects
@@ -27,7 +28,7 @@ section(id="projects", class="section")
         div(class="card")
          header(class="card-header")
           h4(class="title is-4 card-header-title")
-           a(href=project.link, title=project.title)=project.title
+           a(href=project.link, title=project.title)  !{project.title}
          div(class="card-image")
           figure(class="image")
            a(href=project.link, title=project.title)
@@ -85,15 +86,15 @@ section(id="contact", class="section contact")
             div(class="column is-2 has-text-centered")
                 a(href="https://github.com/swaters86", title="Visit Github.com Profile")
                     span(class="icon icon is-large")
-                        img(class="image" src="svg/github.svg", alt="Visit Github.com Profile")
+                        img(class="image" src="svg/github.svg", alt="")
                         span Github
             div(class="column is-2 has-text-centered")
                 a(href="https://codepen.io/swaters86/pens/public/", title="Visit Codepen.io Profile")           
                     span(class="icon icon is-large")
-                        img(src="svg/codepen.svg", alt="Visit Codepen.io Profile")
+                        img(src="svg/codepen.svg", alt="")
                         span Codepen    
             div(class="column is-2 has-text-centered")
                 a(href="https://www.linkedin.com/in/stevenwaters/", title="Visit LinkedIn.com Profile")
                     span(class="icon icon is-large")
-                        img(src="svg/linkedin.svg", alt="Visit Linkedin.com Profile")
+                        img(src="svg/linkedin.svg", alt="")
                         span LinkedIn

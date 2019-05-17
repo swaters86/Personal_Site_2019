@@ -3465,7 +3465,7 @@ body {
 .navbar {
   margin-bottom: 20px;
   background-color: #ebfaf8;
-  border-bottom: 2px #373d48 solid; }
+  border-bottom: 2px #eaeaea solid; }
 
 .navbar-item {
   color: #373d48; }
@@ -3489,14 +3489,11 @@ a.navbar-item-logo.is-active,
 /********************************
     Hero
 ********************************/
-.hero-body {
-  min-height: 200px; }
-
-.intro-text {
-  padding: 50px 0 0 0; }
+.hero {
+  padding: 75px 0 40px 0; }
 
 .hero.is-dark {
-  background-color: #373d48;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/hero-background.webp") center center/cover #373d48;
   color: #ebfaf8; }
 
 /********************************
@@ -3570,9 +3567,6 @@ a.navbar-item-logo.is-active,
   border-radius: 30px;
   box-shadow: initial; }
 
-@media (max-width: 486px) {
-  .projects .project .description-text {
-    height: 200px; } }
 @media (max-width: 425px) {
   .tabs.is-toggle a {
     font-size: .9rem; }
@@ -3586,12 +3580,6 @@ a.navbar-item-logo.is-active,
 
   .social-media-icons a:link {
     font-size: .8rem; } }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .is-gradient-text {
-    background: none;
-    -webkit-background-clip: initial;
-    background-clip: initial;
-    -webkit-text-fill-color: initial; } }
 /********************************
     Section: Film Portfolio
 ********************************/
