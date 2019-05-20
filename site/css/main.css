@@ -3648,7 +3648,14 @@ a.navbar-item-logo.is-active,
 /********************************
     Misc
 ********************************/
+.headline {
+  margin: 20px 0; }
+
+.headline .title.is-2 {
+  margin: 0;
+  padding: 0; }
+
 .title.is-2 {
-  margin-top: 20px; }
+  margin: 20px 0; }
 
 /*# sourceMappingURL=main.css.map */

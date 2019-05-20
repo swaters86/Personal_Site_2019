@@ -20,7 +20,9 @@ section(id="home", class="hero is-dark")
          p(class="intro-text is-size-2 is-size-5-mobile") <strong>Howdy!</strong> My name is Steven Waters. I'm a full-stack developer with a passion for front-end development, UI, UX, and technical support. The languages I know best are HTML5, CSS3, JavaScript, and PHP.
 section(id="projects", class="section")
     div(class="container")
-     h2(class="title is-2 has-text-primary has-text-centered") Latest Projects
+     section(class="headline")
+        h2(class="title is-2 has-text-primary has-text-centered") Latest Projects
+        p(class="has-text-centered") A collection of projects and exercises that I have been working on recently. These are currently <em>hosted on Codepen.io</em>.
      div(class="columns is-multiline")
       - var i = 0
       each project in projects
